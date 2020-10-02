@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 61px 20px 61px;
+  @media all and (min-width: 768px) {
+    flex-direction: row;
+    padding: 10px 40px 10px 40px;
+    justify-content: space-between;
+  }
+  &__small {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    opacity: 0.5;
+    font-family: $fontFamily-text;
+    color: $fontColor-footer;
+  }
+  &__logo {
+    width: 103px;
+    display: block;
+    margin: 12px 0px 0px 0px;
+    @media all and (min-width: 768px) {
+      margin: 0px;
+    }
+  }
+}
