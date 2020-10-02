@@ -1,0 +1,90 @@
+.main {
+  background-color: $color-primary;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  padding: 95px 26.4px 30px 25.6px;
+  &__logo {
+    width: 250px;
+    margin: 0px 0px 35.4px 0px;
+    justify-self: center;
+  }
+  &__title {
+    font-family: $fontFamily-title;
+    color: $fontColor-main;
+    font-size: 19.2px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+  }
+  &__text {
+    font-family: $fontFamily-text;
+    color: $fontColor-secondary;
+    font-size: 12.8px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    margin: 0px 0px 17.8px 0px;
+  }
+  &__benefits {
+    display: flex;
+    border-radius: 4px;
+    border: solid 1.6px rgba(225, 115, 52, 0.21);
+    width: 268px;
+    padding: 15px 20px 10px 20px;
+    margin: 0px 0px 38.6px 0px;
+    justify-content: space-between;
+    &--item {
+      width: 60px;
+      height: 48.8px;
+      text-align: center;
+      margin: 0px 0px 7.8px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &--item-img {
+      width: 32px;
+    }
+    &--item-img2 {
+      width: 25px;
+    }
+    &--item-title {
+      font-family: $fontFamily-text;
+      color: $fontColor-tertiary;
+      font-size: 12.8px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+    }
+  }
+  &__button {
+    text-decoration: none;
+    width: 129px;
+    height: 42px;
+    background-color: $color-secondary;
+    border-radius: 21px;
+    border: 0px;
+    font-family: $fontFamily-text;
+    color: $fontColor-light;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    justify-self: center;
+  }
+}
