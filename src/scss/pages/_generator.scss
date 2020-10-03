@@ -168,3 +168,96 @@
     margin-left: 137px;
   }
 }
+
+.share__button {
+  display: flex;
+  flex-direction: row;
+  width: 199px;
+  height: 50px;
+  background-color: $color-tertiary;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+  border-radius: 12px;
+  border: 0px;
+  font-family: $fontFamily-text;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $fontColor-light;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 30px; 
+  margin-left: 61px;
+  padding: 13px 18px 13px 48px;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  width: 280px;
+  height: 1px;
+  background-color: #d8d8d8;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.card__created  {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  font-family: $fontFamily-text;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: $fontColor-tertiary;
+  margin-left: 51px;
+  margin-top: 20px;
+}
+
+.card__address{
+  width: 292px;
+  height: 17px;
+  font-family: $fontFamily-text;
+  font-size: 12px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: $fontColor-main;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+
+.twitter__button  {
+  display: flex;
+  flex-direction: row;
+  width: 181px;
+  height: 30px;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  background-color: #00a0f5;
+  font-family: $fontFamily-text;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-decoration: none;
+  color: $fontColor-light;
+  margin-top: 10px; 
+  margin-left: 70px;
+  padding: 3px 9px 7px 38px;
+  background-image: url(../images/twitter-bird-white-on-blue.jpg);
+  // background-position: left;
+  background-size: 50px;
+}
