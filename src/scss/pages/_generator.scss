@@ -17,7 +17,7 @@
     margin-left: 10px;
     color: $fontColor-tertiary;
   }
-  &__share  {
+  &__logo  {
     width: 21px;
     height: 18px;
     margin-left: 20px;
@@ -139,5 +139,32 @@
     height: 25px;
     background-color: #a0c0cf;
     margin-top: 20px;
+  }
+}
+
+
+.share {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  &__title  {
+    font-family: $fontFamily-text;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-left: 12px;
+    color: $fontColor-tertiary;
+  }
+  &__logo  {
+    width: 21px;
+    height: 18px;
+    margin-left: 20px;
+  }
+  &__cocodrile  {
+    justify-content: right;
+    width: 16px;
+    height: 18px;
+    transform: rotate(-90deg);
+    color: $fontColor-tertiary;
+    margin-left: 137px;
   }
 }
