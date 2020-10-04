@@ -3,7 +3,42 @@
   margin: 0;
 }
 .menu__form--label {
-  background-color: green;
   display: flex;
   flex-direction: column;
+}
+.menu__form {
+  margin: 0 20px 0 20px;
+  font-family: "Open Sans";
+  // font-weight: 00;
+  /*me parece que es más gordita la letra*/
+}
+.menu__form--label {
+  color: #114e4e;
+  font-size: 14px;
+  line-height: 20px;
+}
+.menu__form--input {
+  width: 90vw;
+  height: 30px;
+  border: solid 1px #a2deaf;
+  outline-color: #a2deaf;
+  font-size: 14px;
+  line-height: 20px;
+}
+::-webkit-input-placeholder {
+  color: #c5c5c5;
+}
+.menu__form--box {
+  width: 30px;
+  height: 30px;
+  border: solid 1px #a2deaf;
+  outline-color: #a2deaf;
+  margin-left: 20px;
+}
+.box-image {
+  display: flex; /*puedo dar solo flex?*/
+}
+.menu__form--image {
+  width: 140px;
+  height: 30px;
 }
