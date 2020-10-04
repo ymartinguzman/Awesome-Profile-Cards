@@ -2,28 +2,38 @@
   box-sizing: border-box;
   margin: 0;
 }
-.menu__form--label {
-  display: flex;
-  flex-direction: column;
+.menu {
+  font-family: "Open Sans";
+}
+.menu__fill {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 191px 0 51px;
 }
 .menu__form {
   margin: 0 20px 0 20px;
-  font-family: "Open Sans";
+  font-size: 14px;
+
   // font-weight: 00;
   /*me parece que es más gordita la letra*/
 }
 .menu__form--label {
+  display: flex;
+  flex-direction: column;
   color: #114e4e;
-  font-size: 14px;
+  // font-weight: 600; No se queda igual
   line-height: 20px;
+  margin-bottom: 7px;
 }
+
 .menu__form--input {
   width: 90vw;
   height: 30px;
   border: solid 1px #a2deaf;
   outline-color: #a2deaf;
-  font-size: 14px;
   line-height: 20px;
+  margin-bottom: 20px;
 }
 ::-webkit-input-placeholder {
   color: #c5c5c5;
@@ -38,7 +48,13 @@
 .box-image {
   display: flex; /*puedo dar solo flex?*/
 }
-.menu__form--image {
+.menu__form--button {
   width: 140px;
   height: 30px;
+  background-color: #e17334;
+  color: #ffffff;
+  padding: 3px 22px 7px 22px;
+  border-radius: 3px;
+  border: rgba(0, 0, 0, 0.32);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
 }
