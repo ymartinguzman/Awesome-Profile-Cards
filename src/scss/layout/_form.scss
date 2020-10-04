@@ -2,6 +2,8 @@
   box-sizing: border-box;
   margin: 0;
 }
-.fill {
+.form {
   background-color: green;
+  display: flex;
+  flex-direction: column;
 }
