@@ -1,5 +1,5 @@
 body {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 .main {
@@ -8,7 +8,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   padding: 95px 26.4px 30px 25.6px;
-  @media all and (min-width: 768px) {
+  @include tablet {
     padding: 350px 0px 59px 0px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
@@ -17,7 +17,7 @@ body {
     width: 250px;
     margin: 0px 0px 35.4px 0px;
     justify-self: center;
-    @media all and (min-width: 768px) {
+    @include tablet {
       margin: 0px;
       grid-column: 2/4;
       width: 419px;
@@ -33,7 +33,7 @@ body {
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    @media all and (min-width: 768px) {
+    @include tablet {
       margin: 31px 0px 0px 0px;
       grid-column: 2/4;
       font-size: 24px;
@@ -50,7 +50,7 @@ body {
     letter-spacing: normal;
     text-align: center;
     margin: 0px 0px 17.8px 0px;
-    @media all and (min-width: 768px) {
+    @include tablet {
       width: 331px;
       justify-self: center;
       grid-column: 2/4;
@@ -66,7 +66,7 @@ body {
     padding: 15px 20px 10px 20px;
     margin: 0px 0px 38.6px 0px;
     justify-content: space-between;
-    @media all and (min-width: 768px) {
+    @include tablet {
       margin: 0px 0px 186px 0px;
       grid-column: 2/4;
       justify-self: center;
@@ -80,7 +80,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      @media all and (min-width: 768px) {
+      @include tablet {
         margin: 0px 0px 12px 0px;
       }
     }
@@ -121,7 +121,7 @@ body {
     text-transform: uppercase;
     padding: 10px 20px;
     justify-self: center;
-    @media all and (min-width: 768px) {
+    @include tablet {
       margin: 0px;
       grid-column: 2/4;
     }
