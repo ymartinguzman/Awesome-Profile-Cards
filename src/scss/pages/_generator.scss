@@ -1,14 +1,14 @@
 .gen-main {
-    width: 100%;
-    height: 460px;
-    background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
-    padding: 40px 35px 40px 45px;
-    @include tablet {
-      width: 330px;
-      height: 100%;
-      border-radius: 6px;
-      padding: 173px 45px 0 45px;
-    }
+  width: 100%;
+  height: 460px;
+  background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+  padding: 40px 35px 40px 45px;
+  @include tablet {
+    width: 330px;
+    height: 100%;
+    border-radius: 6px;
+    padding: 173px 45px 0 45px;
+  }
   &__container {
     margin: 0 auto;
   }
@@ -65,47 +65,42 @@
   }
   &__photo {
     padding: 10px 0 0 0;
-    background-color: blueviolet;;
+    background-color: blueviolet;
     width: 240px;
     height: 200px;
   }
 }
 
-.main {
-  width: 100%;
-  height: 340px;
-}
-
-.design {
+.customize-design__container {
   display: flex;
   flex-direction: row;
   margin-top: 30px;
-  &__title  {
+  &-title {
     font-family: $fontFamily-text;
     text-transform: uppercase;
     font-size: 18px;
     margin-left: 10px;
     color: $fontColor-tertiary;
   }
-  &__logo  {
+  &-logo {
     width: 21px;
     height: 18px;
     margin-left: 20px;
   }
-  &__cocodrile  {
-    justify-content: right;
-    width: 16px;
-    height: 18px;
-    transform: rotate(-90deg);
-    color: $fontColor-tertiary;
-    margin-left: 168px;
-  }
+  // &-crocodile {
+  //   justify-content: right;
+  //   width: 16px;
+  //   height: 18px;
+  //   transform: rotate(-90deg);
+  //   color: $fontColor-tertiary;
+  //   margin-left: 168px;
+  // }
 }
-  
-.colors {
+
+.customize-design__colors1 {
   display: flex;
   flex-direction: row;
-  &__title {
+  &-title {
     text-transform: uppercase;
     font-size: 14px;
     font-family: $fontFamily-text;
@@ -119,28 +114,28 @@
     margin-left: 39px;
     width: 62px;
   }
-  &__selection {
-    background: #438792; 
-    border-radius: 50%; 
+  &-selection {
+    background: #438792;
+    border-radius: 50%;
     width: 17px;
     height: 17px;
     margin-top: 32px;
     margin-left: 82px;
   }
-  &__boxes1 {
+  &-boxes1 {
     width: 30px;
     height: 25px;
     background-color: #114e4e;
     margin-top: 28px;
     margin-left: 10px;
   }
-  &__boxes2 {
+  &-boxes2 {
     width: 30px;
     height: 25px;
     background-color: #438792;
     margin-top: 28px;
   }
-  &__boxes3 {
+  &-boxes3 {
     width: 30px;
     height: 25px;
     background-color: #a2deaf;
@@ -148,31 +143,31 @@
   }
 }
 
-.row {
+.customize-design__colors2 {
   display: flex;
   flex-direction: row;
-  &__selection {
-    background: #438792; 
-    border-radius: 50%; 
+  &-selection {
+    background: #438792;
+    border-radius: 50%;
     width: 17px;
     height: 17px;
     margin-top: 28px;
     margin-left: 183px;
   }
-  &__boxes1 {
+  &-boxes1 {
     width: 30px;
     height: 25px;
     background-color: #420101;
     margin-top: 20px;
     margin-left: 10px;
   }
-  &__boxes2 {
+  &-boxes2 {
     width: 30px;
     height: 25px;
     background-color: #bd1010;
     margin-top: 20px;
   }
-  &__boxes3 {
+  &-boxes3 {
     width: 30px;
     height: 25px;
     background-color: #e95626;
@@ -180,31 +175,31 @@
   }
 }
 
-.again {
+.customize-design__colors3 {
   display: flex;
   flex-direction: row;
-  &__selection {
-    background: #438792; 
-    border-radius: 50%; 
+  &-selection {
+    background: #438792;
+    border-radius: 50%;
     width: 17px;
     height: 17px;
     margin-top: 28px;
     margin-left: 183px;
   }
-  &__boxes1 {
+  &-boxes1 {
     width: 30px;
     height: 25px;
     background-color: #3e5b65;
     margin-top: 20px;
     margin-left: 10px;
   }
-  &__boxes2 {
+  &-boxes2 {
     width: 30px;
     height: 25px;
     background-color: #eab052;
     margin-top: 20px;
   }
-  &__boxes3 {
+  &-boxes3 {
     width: 30px;
     height: 25px;
     background-color: #a0c0cf;
@@ -212,31 +207,93 @@
   }
 }
 
+/*RELLENA*/
+.customize-menu__container {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 191px 0 51px;
+  display: flex;
+  margin-left: 20px;
+  &-logo {
+    width: 21px;
+    height: 18px;
+    margin-top: 7px;
+  }
+}
 
-.share {
+.customize-menu__form {
+  margin: 0 20px 0 20px;
+  font-size: 14px;
+
+  // font-weight: 00;
+  /*me parece que es más gordita la letra*/
+  &-label {
+    display: flex;
+    flex-direction: column;
+    color: #114e4e;
+    // font-weight: 600; No se queda igual
+    line-height: 20px;
+    margin-bottom: 7px;
+  }
+  &-input {
+    width: 90vw;
+    height: 30px;
+    border: solid 1px #a2deaf;
+    outline-color: #a2deaf;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  &::-webkit-input-placeholder {
+    color: #c5c5c5;
+  }
+  &-box {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border: solid 1px #a2deaf;
+    outline-color: #a2deaf;
+    margin-left: 20px;
+
+    &-button {
+      width: 140px;
+      height: 30px;
+      background-color: #e17334;
+      color: #ffffff;
+      padding: 3px 22px 7px 22px;
+      border-radius: 3px;
+      border: rgba(0, 0, 0, 0.32);
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    }
+  }
+}
+
+.gen-main__customize--share {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
-  &__title  {
+}
+.share {
+  &__title {
     font-family: $fontFamily-text;
     text-transform: uppercase;
     font-size: 18px;
     margin-left: 12px;
     color: $fontColor-tertiary;
   }
-  &__logo  {
+  &__logo {
     width: 21px;
     height: 18px;
     margin-left: 20px;
   }
-  &__cocodrile  {
-    justify-content: right;
-    width: 16px;
-    height: 18px;
-    transform: rotate(-90deg);
-    color: $fontColor-tertiary;
-    margin-left: 137px;
-  }
+  // &__crocodile {
+  //   justify-content: right;
+  //   width: 16px;
+  //   height: 18px;
+  //   transform: rotate(-90deg);
+  //   color: $fontColor-tertiary;
+  //   margin-left: 137px;
+  //  }
 }
 
 .share__button {
@@ -258,7 +315,7 @@
   font-size: 18px;
   text-transform: uppercase;
   text-decoration: none;
-  margin-top: 30px; 
+  margin-top: 30px;
   margin-left: 61px;
   padding: 13px 18px 13px 48px;
 }
@@ -273,7 +330,7 @@
   margin-left: 20px;
 }
 
-.card__created  {
+.card__created {
   display: flex;
   flex-direction: row;
   justify-items: center;
@@ -290,7 +347,7 @@
   margin-top: 20px;
 }
 
-.card__address{
+.card__address {
   width: 292px;
   height: 17px;
   font-family: $fontFamily-text;
@@ -306,8 +363,7 @@
   margin-left: 15px;
 }
 
-
-.twitter__button  {
+.twitter__button {
   display: flex;
   flex-direction: row;
   width: 181px;
@@ -324,71 +380,10 @@
   letter-spacing: normal;
   text-decoration: none;
   color: $fontColor-light;
-  margin-top: 10px; 
+  margin-top: 10px;
   margin-left: 70px;
   padding: 3px 9px 7px 38px;
   background-image: url(../images/twitter-bird-white-on-blue.jpg);
   // background-position: left;
   background-size: 50px;
-}
-
-.menu__fill {
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin: 0 191px 0 51px;
-  display: flex;
-  margin-left: 20px;
-}
-.menu__fill-image {
-  width: 21px;
-  height: 18px;
-  margin-top: 7px;
-}
-.menu__form {
-  margin: 0 20px 0 20px;
-  font-size: 14px;
-
-  // font-weight: 00;
-  /*me parece que es más gordita la letra*/
-}
-.menu__form--label {
-  display: flex;
-  flex-direction: column;
-  color: #114e4e;
-  // font-weight: 600; No se queda igual
-  line-height: 20px;
-  margin-bottom: 7px;
-}
-
-.menu__form--input {
-  width: 90vw;
-  height: 30px;
-  border: solid 1px #a2deaf;
-  outline-color: #a2deaf;
-  line-height: 20px;
-  margin-bottom: 20px;
-}
-::-webkit-input-placeholder {
-  color: #c5c5c5;
-}
-.menu__form--box {
-  width: 30px;
-  height: 30px;
-  border: solid 1px #a2deaf;
-  outline-color: #a2deaf;
-  margin-left: 20px;
-}
-.box-image {
-  display: flex; /*puedo dar solo flex?*/
-}
-.menu__form--button {
-  width: 140px;
-  height: 30px;
-  background-color: #e17334;
-  color: #ffffff;
-  padding: 3px 22px 7px 22px;
-  border-radius: 3px;
-  border: rgba(0, 0, 0, 0.32);
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
 }

@@ -12,77 +12,80 @@
 
   <!--DESIGN-->
 
-  <nav class="card__contact">
-    <section class="card__container">
-      <div class="design">
+  <nav class="gen-main__customize">
+    <!--de momento no se usa-->
+    <section class="gen-main__customize-design">
+      <!--de momento no se usa-->
+      <div class="customize-design__container">
         <img
-          class="design__logo"
+          class="customize-design__container-logo"
           src="./assets/images/design.svg"
           alt="Share logo"
         />
-        <h1 class="design__title">Diseña</h1>
+        <h1 class="customize-design__container-title">Diseña</h1>
         <!--cambiar los h1 a h2-->
-        <div class="design__cocodrile"></div>
+        <!-- <div class="customize-design__container-crocodile"></div> -->
       </div>
 
-      <section class="colors">
-        <h2 class="colors__title">Colores</h2>
-        <div class="colors__selection"></div>
-        <div class="colors__boxes1"></div>
-        <div class="colors__boxes2"></div>
-        <div class="colors__boxes3"></div>
+      <section class="customize-design__colors1">
+        <h2 class="customize-design__colors1-title">Colores</h2>
+        <div class="customize-design__colors1-selection"></div>
+        <div class="customize-design__colors1-boxes1"></div>
+        <div class="customize-design__colors1-boxes2"></div>
+        <div class="customize-design__colors1-boxes3"></div>
       </section>
-      <section class="row">
-        <div class="row__selection"></div>
-        <div class="row__boxes1"></div>
-        <div class="row__boxes2"></div>
-        <div class="row__boxes3"></div>
+      <section class="customize-design__colors2">
+        <div class="customize-design__colors2-selection"></div>
+        <div class="customize-design__colors2-boxes1"></div>
+        <div class="customize-design__colors2-boxes2"></div>
+        <div class="customize-design__colors2-boxes3"></div>
       </section>
-      <section class="again">
-        <div class="again__selection"></div>
-        <div class="again__boxes1"></div>
-        <div class="again__boxes2"></div>
-        <div class="again__boxes3"></div>
+      <section class="customize-design__colors3">
+        <div class="customize-design__colors3-selection"></div>
+        <div class="customize-design__colors3-boxes1"></div>
+        <div class="customize-design__colors3-boxes2"></div>
+        <div class="customize-design__colors3-boxes3"></div>
       </section>
     </section>
 
     <!-- FILL -->
-    <section class="section">
-      <nav class="menu">
-        <div class="menu__fill">
-          <img
-            class="menu__fill-image"
-            src="./assets/images/keyboard-solid.svg"
-            alt="keyboard icon"
-          />
-          <h1>Rellena</h1>
-        </div>
-      </nav>
-      <form class="menu__form" action="" method="post">
-        <label class="menu__form--label" for="fullName">Nombre completo </label>
+    <section class="gen-main__customize-menu">
+      <div class="customize-menu__container">
+        <img
+          class="customize-menu__container-logo"
+          src="./assets/images/keyboard-solid.svg"
+          alt="keyboard icon"
+        />
+        <h1>Rellena</h1>
+      </div>
+
+      <form class="customize-menu__form" action="" method="post">
+        <label class="customize-menu__form-label" for="fullName"
+          >Nombre completo
+        </label>
         <input
-          class="menu__form--input"
+          class="customize-menu__form-input"
           placeholder="Ej: Sally Jill"
           type="text"
           name="required"
           id="fullName"
         /><!--desplegar opciones en placeholder?-->
-        <label class="menu__form--label" for="position">Puesto</label>
+        <label class="customize-menu__form-label" for="position">Puesto</label>
         <input
-          class="menu__form--input"
+          class="customize-menu__form-input"
           placeholder="Ej: Front end"
           type="text"
           name="required"
           id="position"
         />
         <div>
-          <label class="menu__form--label" for="fullName"
+          <label class="customize-menu__form-label" for="fullName"
             >Imagen de perfil</label
           >
-          <div class="box-image">
+          <div class="customize-menu__form-box">
             <!--añadir imagen sin div-->
             <input
-              class="menu__form--button"
+              class="customize-menu__form-box-button"
               value="Añadir imagen"
               type="submit"
               required
@@ -91,33 +94,37 @@
             <div class="menu__form--box"></div>
           </div>
         </div>
-        <label class="menu__form--label" for="email">Email</label>
+        <label class="customize-menu__form-label" for="email">Email</label>
         <input
-          class="menu__form--input"
+          class="customize-menu__form-input"
           placeholder="Ej: sally.hill@gmail.com"
           type="email"
           name="required"
           id="email"
         />
-        <label class="menu__form--label" for="telephone">Teléfono </label>
+        <label class="customize-menu__form-label" for="telephone"
+          >Teléfono
+        </label>
         <input
-          class="menu__form--input"
+          class="customize-menu__form-input"
           placeholder="Ej: 555-555-555"
           type="tel"
           name="required"
           id="telephone"
         />
-        <label class="menu__form--label" for="linkedin">Linkedin </label>
+        <label class="customize-menu__form-label" for="linkedin"
+          >Linkedin
+        </label>
         <input
-          class="menu__form--input"
+          class="customize-menu__form-input"
           placeholder="Ej: linkedin.com/in/sally-hill"
           type="text"
           name="required"
           id="linkedin"
         />
-        <label class="menu__form--label" for="github">Github </label>
+        <label class="customize-menu__form-label" for="github">Github </label>
         <input
-          class="menu__form--input"
+          class="customize-menu__form-input"
           placeholder="Ej: @sally-hill"
           type="text"
           name="required"
@@ -128,14 +135,16 @@
 
     <!-- SHARE -->
 
-    <section class="share">
-      <img
-        class="share__logo"
-        src="./assets/images/share.svg"
-        alt="Design profile area"
-      />
-      <h1 class="share__title">Comparte</h1>
-      <div class="share__cocodrile"></div>
+    <section class="gen-main__customize--share">
+      <div class="share">
+        <img
+          class="share__logo"
+          src="./assets/images/share.svg"
+          alt="Design profile area"
+        />
+        <h1 class="share__title">Comparte</h1>
+        <div class="share__cocodrile"></div>
+      </div>
     </section>
     <section>
       <a class="share__button" title="Crear la tarjeta" href=""
