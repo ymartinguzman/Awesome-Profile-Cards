@@ -59,6 +59,7 @@ body {
     }
   }
   &__benefits {
+    justify-self: center;
     display: flex;
     border-radius: 4px;
     border: solid 1.6px rgba(225, 115, 52, 0.21);
@@ -72,7 +73,7 @@ body {
       justify-self: center;
       width: 325px;
     }
-    &--item {
+    &-item {
       width: 60px;
       height: 48.8px;
       text-align: center;
@@ -84,13 +85,13 @@ body {
         margin: 0px 0px 12px 0px;
       }
     }
-    &--item-img {
+    &-itemimg {
       width: 32px;
     }
-    &--item-img2 {
+    &-itemimg2 {
       width: 25px;
     }
-    &--item-title {
+    &-itemtitle {
       font-family: $fontFamily-text;
       color: $fontColor-tertiary;
       font-size: 12.8px;

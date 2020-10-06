@@ -273,20 +273,20 @@
   flex-direction: row;
   margin-top: 10px;
 }
-.share {
-  &__title {
+.customize-share__container {
+  &-title {
     font-family: $fontFamily-text;
     text-transform: uppercase;
     font-size: 18px;
     margin-left: 12px;
     color: $fontColor-tertiary;
   }
-  &__logo {
+  &-logo {
     width: 21px;
     height: 18px;
     margin-left: 20px;
   }
-  // &__crocodile {
+  // &-crocodile {
   //   justify-content: right;
   //   width: 16px;
   //   height: 18px;
@@ -296,7 +296,7 @@
   //  }
 }
 
-.share__button {
+.customize-share__button {
   display: flex;
   flex-direction: row;
   width: 199px;
@@ -320,7 +320,7 @@
   padding: 13px 18px 13px 48px;
 }
 
-.line {
+.customize-share__line {
   display: flex;
   flex-direction: row;
   width: 280px;
@@ -330,24 +330,7 @@
   margin-left: 20px;
 }
 
-.card__created {
-  display: flex;
-  flex-direction: row;
-  justify-items: center;
-  font-family: $fontFamily-text;
-  font-size: 18px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: $fontColor-tertiary;
-  margin-left: 51px;
-  margin-top: 20px;
-}
-
-.card__address {
+.customize-share__web--hidden {
   width: 292px;
   height: 17px;
   font-family: $fontFamily-text;
@@ -363,7 +346,7 @@
   margin-left: 15px;
 }
 
-.twitter__button {
+.customize-share__twitter--hidden {
   display: flex;
   flex-direction: row;
   width: 181px;

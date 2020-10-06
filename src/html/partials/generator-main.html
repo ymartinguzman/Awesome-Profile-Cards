@@ -9,7 +9,7 @@
       </div>
     </div>
   </section>
-
+  <nav class="gen-main__data-form"></nav>
   <!--DESIGN-->
 
   <nav class="gen-main__customize">
@@ -67,7 +67,7 @@
           class="customize-menu__form-input"
           placeholder="Ej: Sally Jill"
           type="text"
-          name="required"
+          required
           id="fullName"
         /><!--desplegar opciones en placeholder?-->
         <label class="customize-menu__form-label" for="position">Puesto</label>
@@ -75,7 +75,7 @@
           class="customize-menu__form-input"
           placeholder="Ej: Front end"
           type="text"
-          name="required"
+          required
           id="position"
         />
         <div>
@@ -99,7 +99,7 @@
           class="customize-menu__form-input"
           placeholder="Ej: sally.hill@gmail.com"
           type="email"
-          name="required"
+          required
           id="email"
         />
         <label class="customize-menu__form-label" for="telephone"
@@ -109,7 +109,7 @@
           class="customize-menu__form-input"
           placeholder="Ej: 555-555-555"
           type="tel"
-          name="required"
+          required
           id="telephone"
         />
         <label class="customize-menu__form-label" for="linkedin"
@@ -119,7 +119,7 @@
           class="customize-menu__form-input"
           placeholder="Ej: linkedin.com/in/sally-hill"
           type="text"
-          name="required"
+          required
           id="linkedin"
         />
         <label class="customize-menu__form-label" for="github">Github </label>
@@ -127,7 +127,7 @@
           class="customize-menu__form-input"
           placeholder="Ej: @sally-hill"
           type="text"
-          name="required"
+          required
           id="github"
         />
       </form>
@@ -135,29 +135,29 @@
 
     <!-- SHARE -->
 
-    <section class="gen-main__customize--share">
-      <div class="share">
+    <section class="gen-main__customize-share">
+      <div class="customize-share__container">
         <img
-          class="share__logo"
+          class="customize-share__container-logo"
           src="./assets/images/share.svg"
           alt="Design profile area"
         />
-        <h1 class="share__title">Comparte</h1>
-        <div class="share__cocodrile"></div>
+        <h1 class="customize-share__container-title">Comparte</h1>
+        <!-- <div class="customize-share__container-crocodile"></div> -->
       </div>
-    </section>
-    <section>
-      <a class="share__button" title="Crear la tarjeta" href=""
+      <a class="customize-share__button" title="Crear la tarjeta" href=""
         >Crear tarjeta</a
       >
-      <div class="line"></div>
-      <p class="card__created">La tarjeta ha sido creada:</p>
-      <a class="card__address" href=""
+      <div class="customize-share__line"></div>
+    </section>
+    <section class="gen-main__customize-share--hidden">
+      <p class="customize-share__text--hidden">La tarjeta ha sido creada:</p>
+      <a class="customize-share__web--hidden" href=""
         >https://awesome-profile-card.com?id=A456DF0001</a
       >
-      <a class="twitter__button" href="">Compartir en twitter</a>
+      <a class="customize-share__twitter--hidden" href=""
+        >Compartir en twitter</a
+      >
     </section>
   </nav>
-
-  <nav class="gen-main__data-form"></nav>
 </main>
