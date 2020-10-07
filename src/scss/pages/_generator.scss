@@ -1,5 +1,6 @@
 .gen-main {
   width: 100%;
+  padding: 0px 20px 0px 20px;
   @include tablet {
     background-color: #f5f5f5;
     padding: 20px 40px 20px 40px;
@@ -11,8 +12,11 @@
 
   &__container {
     background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
-    padding: 40px 35px 40px 45px;
     height: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 38px 0px 40px 0px;
     @include tablet {
       margin: 0px;
       min-width: 330px;
@@ -22,9 +26,6 @@
       padding: 173px 45px 0 45px;
       grid-column: 2/3;
       grid-row: 1/2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
     &-inner {
       width: 240px;
@@ -38,6 +39,7 @@
     font-stretch: normal;
     font-style: normal;
     line-height: 1.67;
+    text-transform: uppercase;
     letter-spacing: normal;
     color: $fontColor-tertiary;
     width: 75px;
@@ -45,6 +47,11 @@
     border-radius: 15px;
     border: solid 1px $fontColor-light;
     margin: 0 0 20px 0;
+    padding: 0px 0px 0px 25px;
+    background-image: url(../images/trash.svg);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: 10px 5px;
     @include tablet {
       align-self: flex-start;
     }
@@ -106,7 +113,6 @@
   &-logo {
     width: 21px;
     height: 18px;
-    margin-left: 20px;
   }
   // &-crocodile {
   //   justify-content: right;
@@ -128,6 +134,8 @@
   }
   &-design {
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
   }
   &-menu {
     margin-bottom: 30px;
@@ -137,6 +145,8 @@
 .customize-design__colors1 {
   display: flex;
   flex-direction: row;
+  align-self: flex-end;
+  margin-top: -35px;
 
   &-title {
     text-transform: uppercase;
@@ -149,7 +159,7 @@
     line-height: normal;
     letter-spacing: normal;
     margin-top: 22px;
-    margin-left: 39px;
+    margin-left: 19px;
     width: 62px;
   }
   &-selection {
@@ -160,6 +170,7 @@
     margin-top: 32px;
     margin-left: 82px;
   }
+
   &-boxes1 {
     width: 30px;
     height: 25px;
@@ -184,13 +195,13 @@
 .customize-design__colors2 {
   display: flex;
   flex-direction: row;
+  align-self: flex-end;
   &-selection {
     background: #438792;
     border-radius: 50%;
     width: 17px;
     height: 17px;
     margin-top: 28px;
-    margin-left: 183px;
   }
   &-boxes1 {
     width: 30px;
@@ -216,13 +227,13 @@
 .customize-design__colors3 {
   display: flex;
   flex-direction: row;
+  align-self: flex-end;
   &-selection {
     background: #438792;
     border-radius: 50%;
     width: 17px;
     height: 17px;
     margin-top: 28px;
-    margin-left: 183px;
   }
   &-boxes1 {
     width: 30px;
@@ -250,9 +261,8 @@
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  margin: 0 191px 0 51px;
   display: flex;
-  margin: 0px 0px 20px 20px;
+  margin: 0px 0px 20px 0px;
   @include tablet {
     align-items: center;
     margin-bottom: 20px;
@@ -272,7 +282,6 @@
 }
 
 .customize-menu__form {
-  margin: 0 20px 0 20px;
   font-size: 14px;
 
   // font-weight: 00;
@@ -284,6 +293,7 @@
     // font-weight: 600; No se queda igual
     line-height: 20px;
     margin-bottom: 7px;
+    font-family: $fontFamily-text;
   }
   &-input {
     width: 90vw;
@@ -292,6 +302,7 @@
     outline-color: #a2deaf;
     line-height: 20px;
     margin-bottom: 20px;
+    padding: 0px 0px 0px 10px;
     @include tablet {
       width: 100%;
     }
@@ -305,12 +316,15 @@
     height: 30px;
     border: solid 1px #a2deaf;
     outline-color: #a2deaf;
-    margin: 0px 0px 20px 20px;
+    margin: 0px 0px 20px 0px;
 
     &-button {
       width: 140px;
       height: 30px;
+      font-family: $fontFamily-text;
+      line-height: 21px;
       background-color: #e17334;
+      font-size: 14px;
       color: #ffffff;
       padding: 3px 22px 7px 22px;
       border-radius: 3px;
@@ -325,7 +339,6 @@
   flex-direction: column;
   margin: 10px 0px 30px 0px;
   @include tablet {
-    width: 90%;
     margin: 10px 0px 30px 0px;
   }
   &--hidden {
@@ -353,7 +366,6 @@
   &-logo {
     width: 21px;
     height: 18px;
-    margin-left: 20px;
   }
 
   // &-crocodile {
@@ -371,7 +383,6 @@
   flex-direction: row;
   width: 199px;
   height: 50px;
-  background-color: $color-tertiary;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
   border-radius: 12px;
   border: 0px;
@@ -386,8 +397,14 @@
   text-transform: uppercase;
   text-decoration: none;
   margin-top: 30px;
-  margin-left: 61px;
   padding: 13px 18px 13px 48px;
+  align-self: center;
+  background-color: $color-tertiary;
+  background-image: url(../images/address.svg);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: 17px 14px;
+
   @include tablet {
     align-self: center;
   }
