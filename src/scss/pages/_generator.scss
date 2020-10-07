@@ -1,16 +1,36 @@
 .gen-main {
   width: 100%;
-  height: 460px;
-  background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
-  padding: 40px 35px 40px 45px;
+  background-color: #f5f5f5;
+
   @include tablet {
-    width: 330px;
-    height: 100%;
-    border-radius: 6px;
-    padding: 173px 45px 0 45px;
+    padding: 20px 40px 20px 40px;
+    display: grid;
+    grid-template-columns: 399px 1fr;
+    grid-template-rows: auto;
+    grid-gap: 30px;
   }
+
   &__container {
+    background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
     margin: 0 auto;
+    padding: 40px 35px 40px 45px;
+    height: 460px;
+    @include tablet {
+      margin: 0px;
+      min-width: 330px;
+      width: auto;
+      height: 812px;
+      border-radius: 6px;
+      padding: 173px 45px 0 45px;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-inner {
+      width: 240px;
+    }
   }
   &__btn--reset {
     text-transform: capitalize;
@@ -27,6 +47,9 @@
     border-radius: 15px;
     border: solid 1px $fontColor-light;
     margin: 0 0 20px 0;
+    @include tablet {
+      align-self: flex-start;
+    }
   }
   &__card {
     width: 240px;
@@ -97,9 +120,26 @@
   // }
 }
 
+.gen-main__customize {
+  @include tablet {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    width: 399px;
+  }
+  &-design {
+    margin-bottom: 30px;
+  }
+  &-menu {
+    margin-bottom: 30px;
+  }
+}
+
 .customize-design__colors1 {
   display: flex;
   flex-direction: row;
+
   &-title {
     text-transform: uppercase;
     font-size: 14px;
@@ -215,10 +255,22 @@
   margin: 0 191px 0 51px;
   display: flex;
   margin-left: 20px;
+  @include tablet {
+    width: 399px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
   &-logo {
     width: 21px;
     height: 18px;
     margin-top: 7px;
+  }
+  &-title {
+    font-family: $fontFamily-text;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-left: 10px;
+    color: $fontColor-tertiary;
   }
 }
 
@@ -243,6 +295,9 @@
     outline-color: #a2deaf;
     line-height: 20px;
     margin-bottom: 20px;
+    @include tablet {
+      width: 100%;
+    }
   }
   &::-webkit-input-placeholder {
     color: #c5c5c5;
@@ -268,24 +323,42 @@
   }
 }
 
-.gen-main__customize--share {
+.gen-main__customize-share {
   display: flex;
-  flex-direction: row;
-  margin-top: 10px;
+  flex-direction: column;
+  margin: 10px 0px 30px 0px;
+  @include tablet {
+    width: 90%;
+    margin: 10px 0px 30px 0px;
+  }
+  &--hidden {
+    padding: 20px 0px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #d8d8d8;
+    border-right: none;
+    border-left: none;
+  }
 }
 .customize-share__container {
+  display: flex;
   &-title {
     font-family: $fontFamily-text;
     text-transform: uppercase;
     font-size: 18px;
     margin-left: 12px;
     color: $fontColor-tertiary;
+    @include tablet {
+      margin-bottom: 5px;
+    }
   }
   &-logo {
     width: 21px;
     height: 18px;
     margin-left: 20px;
   }
+
   // &-crocodile {
   //   justify-content: right;
   //   width: 16px;
@@ -318,16 +391,9 @@
   margin-top: 30px;
   margin-left: 61px;
   padding: 13px 18px 13px 48px;
-}
-
-.customize-share__line {
-  display: flex;
-  flex-direction: row;
-  width: 280px;
-  height: 1px;
-  background-color: #d8d8d8;
-  margin-top: 30px;
-  margin-left: 20px;
+  @include tablet {
+    align-self: center;
+  }
 }
 
 .customize-share__web--hidden {
@@ -340,10 +406,20 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: $fontColor-main;
   margin-top: 5px;
-  margin-left: 15px;
+
+  @include tablet {
+    margin: 0px 0px 10px 0px;
+  }
+}
+.customize-share__text--hidden {
+  @include tablet {
+    text-align: center;
+  }
 }
 
 .customize-share__twitter--hidden {
@@ -359,14 +435,18 @@
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.43;
+  line-height: 21px;
   letter-spacing: normal;
   text-decoration: none;
   color: $fontColor-light;
   margin-top: 10px;
-  margin-left: 70px;
   padding: 3px 9px 7px 38px;
-  background-image: url(../images/twitter-bird-white-on-blue.jpg);
+  background-image: url(../images/twittersvg.svg);
   // background-position: left;
-  background-size: 50px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: 10.5px 6px;
+  @include tablet {
+    margin: 0;
+  }
 }
