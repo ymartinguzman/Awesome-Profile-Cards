@@ -1,16 +1,23 @@
 .gen-main {
+  display: grid;
+  grid-template-rows: auto auto;
   width: 100%;
   height: 460px;
   background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
   padding: 40px 35px 40px 45px;
   @include tablet {
-    width: 330px;
+    grid-template-rows: auto;
+    grid-template-columns: 330px 330px;
+    column-gap: 30px;
     height: 100%;
     border-radius: 6px;
-    padding: 173px 45px 0 45px;
   }
   &__container {
+    grid-row: 1 / 2;
     margin: 0 auto;
+    @include tablet {
+      grid-column: 2 / 3;
+    }
   }
   &__btn--reset {
     text-transform: capitalize;
@@ -35,6 +42,12 @@
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
     background-color: $fontColor-light;
     padding: 21px 0 0 0;
+  }
+  &__customize {
+    grid-row: 2 / 3;
+    @include tablet {
+      grid-column: 1 / 2;
+    }
   }
 }
 
@@ -74,7 +87,7 @@
 .customize-design__container {
   display: flex;
   flex-direction: row;
-  margin-top: 30px;
+  // margin-top: 30px;
   &-title {
     font-family: $fontFamily-text;
     text-transform: uppercase;

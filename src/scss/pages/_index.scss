@@ -1,26 +1,36 @@
 body {
-  width: 100vw;
   height: 100vh;
 }
-.main {
+
+.main__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: $color-primary;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  padding: 95px 26.4px 30px 25.6px;
+}
+
+.main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 95px 0 30px 0;
+  justify-content: space-between;
   @include tablet {
-    padding: 350px 0px 59px 0px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
+    padding: 300px 0 60px 0;
+  }
+  &__title-container {
+    
   }
   &__logo {
     width: 250px;
-    margin: 0px 0px 35.4px 0px;
     justify-self: center;
+    padding: 0 0 35.5px 0;
     @include tablet {
-      margin: 0px;
-      grid-column: 2/4;
       width: 419px;
+      padding: 0 0 31px 0;
     }
   }
   &__title {
@@ -34,14 +44,13 @@ body {
     letter-spacing: normal;
     text-align: center;
     @include tablet {
-      margin: 31px 0px 0px 0px;
-      grid-column: 2/4;
       font-size: 24px;
     }
   }
   &__text {
     font-family: $fontFamily-text;
     color: $fontColor-secondary;
+    width: 300px;
     font-size: 12.8px;
     font-weight: normal;
     font-stretch: normal;
@@ -49,40 +58,34 @@ body {
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    margin: 0px 0px 17.8px 0px;
+    padding: 0 28px 18px 28px;
     @include tablet {
-      width: 331px;
+      width: 400px;
       justify-self: center;
-      grid-column: 2/4;
       font-size: 16px;
-      margin: 0px 0px 27px 0px;
     }
   }
   &__benefits {
-    justify-self: center;
     display: flex;
     border-radius: 4px;
     border: solid 1.6px rgba(225, 115, 52, 0.21);
     width: 268px;
-    padding: 15px 20px 10px 20px;
-    margin: 0px 0px 38.6px 0px;
-    justify-content: space-between;
+    height: 74px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 38px;
     @include tablet {
-      margin: 0px 0px 186px 0px;
-      grid-column: 2/4;
-      justify-self: center;
       width: 325px;
     }
     &-item {
+      
       width: 60px;
       height: 48.8px;
       text-align: center;
-      margin: 0px 0px 7.8px 0px;
       display: flex;
       flex-direction: column;
       align-items: center;
       @include tablet {
-        margin: 0px 0px 12px 0px;
       }
     }
     &-itemimg {
@@ -116,15 +119,10 @@ body {
     font-weight: 600;
     font-stretch: normal;
     font-style: normal;
-    line-height: normal;
+    line-height: 42px;
     letter-spacing: normal;
-    text-align: center;
     text-transform: uppercase;
-    padding: 10px 20px;
-    justify-self: center;
-    @include tablet {
-      margin: 0px;
-      grid-column: 2/4;
-    }
+    text-justify: center;
+    text-align: center;
   }
 }
