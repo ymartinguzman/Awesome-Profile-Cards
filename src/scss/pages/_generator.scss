@@ -2,21 +2,35 @@
   display: grid;
   grid-template-rows: auto auto;
   width: 100%;
-  height: 460px;
-  background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
-  padding: 40px 35px 40px 45px;
+  padding: 0px 20px 0px 20px;
   @include tablet {
+    background-color: #f5f5f5;
+    padding: 20px 40px 20px 40px;
+    display: grid;
+    grid-template-columns: 399px 1fr;
     grid-template-rows: auto;
-    grid-template-columns: 330px 330px;
-    column-gap: 30px;
-    height: 100%;
-    border-radius: 6px;
+    grid-gap: 30px;
   }
+
   &__container {
-    grid-row: 1 / 2;
-    margin: 0 auto;
+    background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 38px 0px 40px 0px;
     @include tablet {
-      grid-column: 2 / 3;
+      margin: 0px;
+      min-width: 330px;
+      width: auto;
+      height: 812px;
+      border-radius: 6px;
+      padding: 173px 45px 0 45px;
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+    &-inner {
+      width: 240px;
     }
   }
   &__btn--reset {
@@ -27,6 +41,7 @@
     font-stretch: normal;
     font-style: normal;
     line-height: 1.67;
+    text-transform: uppercase;
     letter-spacing: normal;
     color: $fontColor-tertiary;
     width: 75px;
@@ -34,6 +49,14 @@
     border-radius: 15px;
     border: solid 1px $fontColor-light;
     margin: 0 0 20px 0;
+    padding: 0px 0px 0px 25px;
+    background-image: url(../images/trash.svg);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: 10px 5px;
+    @include tablet {
+      align-self: flex-start;
+    }
   }
   &__card {
     width: 240px;
@@ -98,7 +121,6 @@
   &-logo {
     width: 21px;
     height: 18px;
-    margin-left: 20px;
   }
   // &-crocodile {
   //   justify-content: right;
@@ -110,9 +132,30 @@
   // }
 }
 
+.gen-main__customize {
+  @include tablet {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    width: 399px;
+  }
+  &-design {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  &-menu {
+    margin-bottom: 30px;
+  }
+}
+
 .customize-design__colors1 {
   display: flex;
   flex-direction: row;
+  align-self: flex-end;
+  margin-top: -35px;
+
   &-title {
     text-transform: uppercase;
     font-size: 14px;
@@ -124,7 +167,7 @@
     line-height: normal;
     letter-spacing: normal;
     margin-top: 22px;
-    margin-left: 39px;
+    margin-left: 19px;
     width: 62px;
   }
   &-selection {
@@ -135,6 +178,7 @@
     margin-top: 32px;
     margin-left: 82px;
   }
+
   &-boxes1 {
     width: 30px;
     height: 25px;
@@ -159,13 +203,13 @@
 .customize-design__colors2 {
   display: flex;
   flex-direction: row;
+  align-self: flex-end;
   &-selection {
     background: #438792;
     border-radius: 50%;
     width: 17px;
     height: 17px;
     margin-top: 28px;
-    margin-left: 183px;
   }
   &-boxes1 {
     width: 30px;
@@ -191,13 +235,13 @@
 .customize-design__colors3 {
   display: flex;
   flex-direction: row;
+  align-self: flex-end;
   &-selection {
     background: #438792;
     border-radius: 50%;
     width: 17px;
     height: 17px;
     margin-top: 28px;
-    margin-left: 183px;
   }
   &-boxes1 {
     width: 30px;
@@ -225,18 +269,27 @@
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  margin: 0 191px 0 51px;
   display: flex;
-  margin-left: 20px;
+  margin: 0px 0px 20px 0px;
+  @include tablet {
+    align-items: center;
+    margin-bottom: 20px;
+  }
   &-logo {
     width: 21px;
     height: 18px;
     margin-top: 7px;
   }
+  &-title {
+    font-family: $fontFamily-text;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-left: 10px;
+    color: $fontColor-tertiary;
+  }
 }
 
 .customize-menu__form {
-  margin: 0 20px 0 20px;
   font-size: 14px;
 
   // font-weight: 00;
@@ -248,6 +301,7 @@
     // font-weight: 600; No se queda igual
     line-height: 20px;
     margin-bottom: 7px;
+    font-family: $fontFamily-text;
   }
   &-input {
     width: 90vw;
@@ -256,6 +310,10 @@
     outline-color: #a2deaf;
     line-height: 20px;
     margin-bottom: 20px;
+    padding: 0px 0px 0px 10px;
+    @include tablet {
+      width: 100%;
+    }
   }
   &::-webkit-input-placeholder {
     color: #c5c5c5;
@@ -266,12 +324,15 @@
     height: 30px;
     border: solid 1px #a2deaf;
     outline-color: #a2deaf;
-    margin-left: 20px;
+    margin: 0px 0px 20px 0px;
 
     &-button {
       width: 140px;
       height: 30px;
+      font-family: $fontFamily-text;
+      line-height: 21px;
       background-color: #e17334;
+      font-size: 14px;
       color: #ffffff;
       padding: 3px 22px 7px 22px;
       border-radius: 3px;
@@ -281,24 +342,40 @@
   }
 }
 
-.gen-main__customize--share {
+.gen-main__customize-share {
   display: flex;
-  flex-direction: row;
-  margin-top: 10px;
+  flex-direction: column;
+  margin: 10px 0px 30px 0px;
+  @include tablet {
+    margin: 10px 0px 30px 0px;
+  }
+  &--hidden {
+    padding: 20px 0px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #d8d8d8;
+    border-right: none;
+    border-left: none;
+  }
 }
 .customize-share__container {
+  display: flex;
   &-title {
     font-family: $fontFamily-text;
     text-transform: uppercase;
     font-size: 18px;
     margin-left: 12px;
     color: $fontColor-tertiary;
+    @include tablet {
+      margin-bottom: 5px;
+    }
   }
   &-logo {
     width: 21px;
     height: 18px;
-    margin-left: 20px;
   }
+
   // &-crocodile {
   //   justify-content: right;
   //   width: 16px;
@@ -314,7 +391,6 @@
   flex-direction: row;
   width: 199px;
   height: 50px;
-  background-color: $color-tertiary;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
   border-radius: 12px;
   border: 0px;
@@ -329,18 +405,17 @@
   text-transform: uppercase;
   text-decoration: none;
   margin-top: 30px;
-  margin-left: 61px;
   padding: 13px 18px 13px 48px;
-}
+  align-self: center;
+  background-color: $color-tertiary;
+  background-image: url(../images/address.svg);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: 17px 14px;
 
-.customize-share__line {
-  display: flex;
-  flex-direction: row;
-  width: 280px;
-  height: 1px;
-  background-color: #d8d8d8;
-  margin-top: 30px;
-  margin-left: 20px;
+  @include tablet {
+    align-self: center;
+  }
 }
 
 .customize-share__web--hidden {
@@ -353,10 +428,22 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: $fontColor-main;
   margin-top: 5px;
   margin-left: 15px;
+  @include tablet {
+    margin: 0px 0px 10px 0px;
+  }
+}
+.customize-share__text--hidden {
+  text-align: center;
+  font-family: $fontFamily-text;
+  font-weight: 600;
+  font-size: 18px;
+  color: $fontColor-tertiary;
 }
 
 .customize-share__twitter--hidden {
@@ -372,14 +459,18 @@
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.43;
+  line-height: 21px;
   letter-spacing: normal;
   text-decoration: none;
   color: $fontColor-light;
-  margin-top: 10px;
-  margin-left: 70px;
+  margin: 10px 0px 0px 0px;
   padding: 3px 9px 7px 38px;
-  background-image: url(../images/twitter-bird-white-on-blue.jpg);
+  background-image: url(../images/twittersvg.svg);
   // background-position: left;
-  background-size: 50px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: 10.5px 6px;
+  @include tablet {
+    margin: 0;
+  }
 }
