@@ -167,25 +167,28 @@
     width: 62px;
   }
   &-selection {
-    background: #438792;
+    background: $color-secondary;
     border-radius: 50%;
     width: 17px;
     height: 17px;
     margin-top: 32px;
     margin-left: 82px;
+    @include tablet {
+      margin-left: 129px;
+    }
   }
 
   &-boxes1 {
     width: 30px;
     height: 25px;
-    background-color: #114e4e;
+    background-color: $color-quaternay;
     margin-top: 28px;
     margin-left: 10px;
   }
   &-boxes2 {
     width: 30px;
     height: 25px;
-    background-color: #438792;
+    background-color: $color-secondary;
     margin-top: 28px;
   }
   &-boxes3 {
@@ -201,7 +204,7 @@
   flex-direction: row;
   justify-content: flex-end;
   &-selection {
-    background: #438792;
+    background: $color-secondary;
     border-radius: 50%;
     width: 17px;
     height: 17px;
@@ -233,7 +236,7 @@
   flex-direction: row;
   justify-content: flex-end;
   &-selection {
-    background: #438792;
+    background: $color-secondary;
     border-radius: 50%;
     width: 17px;
     height: 17px;
@@ -417,6 +420,8 @@
 .customize-share__web--hidden {
   font-family: $fontFamily-text;
   font-size: 12px;
+  width: 292px;
+  height: 17px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
