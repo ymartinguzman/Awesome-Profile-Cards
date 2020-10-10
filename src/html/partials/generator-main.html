@@ -39,45 +39,47 @@
       <div class="customize-design__container">
         <img class="customize-design__container-logo" src="./assets/images/design.svg" alt="Share logo" />
         <h2 class="customize-design__container-title">Diseña</h2>
-        <!--cambiar los h1 a h2-->
-        <!-- <div class="customize-design__container-crocodile"></div> -->
+        <button class="customize-design__container-btn"></button>
       </div>
       
+      
       <form class="customize-design__colors" action="" method="GET">
-        <lavel class="customize-design__colors1" for="colors1">
-          <h2 class="customize-design__colors1-title">Colores</h2>
+        <h2 class="customize-design__colors-title">Colores</h2>
+        <label class="customize-design__colors1" for="colors1">          
           <input class="customize-design__colors1-selection js-customize-design__colors1-selection" 
           type="radio"       
           id="colors1"
           value="greenpalette"
-          name="colors">
+          name="colors"/>
+          
             <div class="customize-design__colors1-boxes1"></div>
             <div class="customize-design__colors1-boxes2"></div>
             <div class="customize-design__colors1-boxes3"></div>
-          </input>
-        </lavel>
-        <lavel class="customize-design__colors2" for="colors2">
+         
+         
+        </label>
+        <label class="customize-design__colors2" for="colors2">
           <input class="customize-design__colors2-selection js-customize-design__colors1-selection" 
           type="radio"
           id="colors2"
           value="orangepalette"
-          name="colors">
+          name="colors"/>
             <div class="customize-design__colors2-boxes1"></div>
             <div class="customize-design__colors2-boxes2"></div>
             <div class="customize-design__colors2-boxes3"></div>
-          </input>
-        </lavel>
-        <lavel class="customize-design__colors3" for="colors3">
+          
+        </label>
+        <label class="customize-design__colors3" for="colors3">
           <input class="customize-design__colors3-selection js-customize-design__colors1-selection" 
           type="radio"
           id="colors3"
           value="bluepalette"
-          name="colors">
+          name="colors"/>
             <div class="customize-design__colors3-boxes1"></div>
             <div class="customize-design__colors3-boxes2"></div>
             <div class="customize-design__colors3-boxes3"></div>
-          </input>
-        </lavel>
+         
+        </label>
       </form>
     </section>
     <include src="./form.html"></include>

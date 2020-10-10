@@ -1,6 +1,5 @@
 .gen-main {
   width: 100%;
-  padding: 0px 20px 0px 20px;
   @include tablet {
     background-color: #f5f5f5;
     padding: 20px 40px 20px 40px;
@@ -9,7 +8,9 @@
     grid-template-rows: auto;
     grid-gap: 30px;
   }
-
+  &__customize {
+    padding: 0px 20px 0px 20px;
+  }
   &__container {
     background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
     height: 460px;
@@ -99,7 +100,11 @@
     @include image-carrousel;
   }
   &__img {
-    &-1, &-2, &-3, &-4, &-5 {
+    &-1,
+    &-2,
+    &-3,
+    &-4,
+    &-5 {
       width: 100%;
       position: absolute;
       margin-top: 0;
@@ -117,7 +122,9 @@
       text-align: center;
       margin: 0 0 0 10px;
     }
-    &-email, &-linkedin, &-github {
+    &-email,
+    &-linkedin,
+    &-github {
       font-size: 9px;
       color: $fontColor-secondary;
       line-height: 32px;
@@ -126,7 +133,7 @@
       font-size: 12px;
       color: $fontColor-secondary;
       line-height: 36px;
-    } 
+    }
   }
 }
 
@@ -134,6 +141,8 @@
   display: flex;
   flex-direction: row;
   margin-top: 30px;
+  position: relative;
+
   &-title {
     font-family: $fontFamily-text;
     text-transform: uppercase;
@@ -167,22 +176,18 @@
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid $color-border;
+    padding-bottom: 30px;
   }
   &-menu {
     margin-bottom: 30px;
+    border-bottom: 1px solid $color-border;
+    padding-bottom: 30px;
   }
 }
 
-.customize-design__colors{
+.customize-design__colors {
   margin-top: 22px;
-}
-
-.customize-design__colors1 {
-  display: flex;
-  flex-direction: row;
-  align-self: flex-end;
-  margin-top: -35px;
-
   &-title {
     text-transform: uppercase;
     font-size: 14px;
@@ -193,10 +198,18 @@
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    margin-top: 22px;
     margin-left: 19px;
     width: 62px;
   }
+}
+
+.customize-design__colors1 {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  margin-top: -35px;
+  justify-content: flex-end;
+
   &-selection {
     background: $color-secondary;
     border-radius: 50%;
@@ -204,9 +217,6 @@
     height: 17px;
     margin-top: 32px;
     margin-left: 82px;
-    @include tablet {
-      margin-left: 129px;
-    }
   }
 
   &-boxes1 {
@@ -301,6 +311,7 @@
   text-transform: uppercase;
   display: flex;
   margin: 0px 0px 20px 0px;
+  position: relative;
   @include tablet {
     align-items: center;
     margin-bottom: 20px;
@@ -413,6 +424,7 @@
 }
 .customize-share__container {
   display: flex;
+  position: relative;
   &-title {
     font-family: $fontFamily-text;
     text-transform: uppercase;
@@ -524,5 +536,29 @@
   background-position: 10.5px 6px;
   @include tablet {
     margin: 0;
+  }
+}
+//JS
+.js__hidden {
+  display: none;
+}
+.js__button-arrow {
+  transform: rotate(180deg);
+}
+.customize-design__container-btn,
+.customize-menu__container-btn,
+.customize-share__container-btn {
+  background-image: url(../images/angle.svg);
+  background-repeat: no-repeat;
+  background-size: 16px 18px;
+  width: 16px;
+  height: 18px;
+  border: none;
+  transform: rotate(180deg);
+  background-color: $fontColor-light;
+  position: absolute;
+  right: 0px;
+  @include tablet {
+    background-color: $color-primary;
   }
 }
