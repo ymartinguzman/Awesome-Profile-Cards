@@ -85,16 +85,15 @@
           <label class="customize-menu__form-label" for="fullName"
             >Imagen de perfil</label
           >
-          <div class="customize-menu__form-box">
-            <!--añadir imagen sin div-->
-            <input
-              class="customize-menu__form-box-button"
-              value="Añadir imagen"
-              type="submit"
-              required
-            />
-            <!--cambiar placeholder--><!--required??-->
-            <div class="menu__form--box"></div>
+          <div class="action">
+            <button class="action__upload-btn js__profile-trigger" type="button">Get IMAGE!</button>
+            <input type="file" name="" id="img-selector" class="action__hiddenField js__profile-upload-btn">
+          </div>
+          <div class="profile">
+            <div class="profile__image js__profile-image"
+              style="background-image:url(https://via.placeholder.com/300x300/cccccc/666666/?text=IMAGE)"></div>
+            <div class="profile__preview js__profile-preview"></div>
+          
           </div>
         </div>
         <label class="customize-menu__form-label" for="email">Email</label>

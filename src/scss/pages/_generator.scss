@@ -310,28 +310,50 @@
   &::-webkit-input-placeholder {
     color: #c5c5c5;
   }
-  &-box {
-    display: flex;
-    width: 30px;
-    height: 30px;
-    border: solid 1px #a2deaf;
-    outline-color: #a2deaf;
-    margin: 0px 0px 20px 0px;
+}
+.action {
+  text-align: center;
+  margin: 30px;
+}
+.action__upload-btn {
+  background: deeppink;
+  border-radius: 15px;
+  border: 0;
+  box-shadow: 0 0 5px rgba(#000, 0.3);
+  box-sizing: border-box;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 10px 20px;
+  width: 250px;
+}
+.action__hiddenField {
+  /* Ocultamos el input de tipo "file" porque no podemos 
+  darle los estilos que queremos */
+  display: none;
+}
 
-    &-button {
-      width: 140px;
-      height: 30px;
-      font-family: $fontFamily-text;
-      line-height: 21px;
-      background-color: #e17334;
-      font-size: 14px;
-      color: #ffffff;
-      padding: 3px 22px 7px 22px;
-      border-radius: 3px;
-      border: rgba(0, 0, 0, 0.32);
-      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-    }
-  }
+.profile {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.profile__image,
+.profile__preview {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ccc;
+}
+.profile__image {
+  width: 300px;
+  height: 300px;
+}
+
+.profile__preview {
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
 }
 
 .gen-main__customize-share {
