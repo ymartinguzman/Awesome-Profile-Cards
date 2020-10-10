@@ -539,8 +539,11 @@
   }
 }
 //JS
-.js-hidden {
+.js__hidden {
   display: none;
+}
+.js__button-arrow {
+  transform: rotate(180deg);
 }
 .customize-design__container-btn,
 .customize-menu__container-btn,
