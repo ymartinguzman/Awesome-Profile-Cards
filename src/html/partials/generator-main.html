@@ -5,51 +5,81 @@
         <h1 class="card__name-surname">Nombre Apellido</h1>
         <h2 class="card__occupation">Front-end developer</h2>
         <div class="card__photo">
-          <img class="card__img" src="" alt="Card Photo" />
+          <img class="card__img-1" src="./assets/images/pin-long-brown-hair.png" alt="Card Photo" />
+          <img class="card__img-2" src="./assets/images/pin-glasses.png" alt="Card Photo" />
+          <img class="card__img-3" src="./assets/images/pin-dark-hair.png" alt="Card Photo" />
+          <img class="card__img-4" src="./assets/images/pin-lights.png" alt="Card Photo" />
+          <img class="card__img-5" src="./assets/images/pin-long-hair.png" alt="Card Photo" />
         </div>
+        <nav class="card__contact">
+          <div class="card__contact-container">
+            <a class="card__contact-call" href="" alt="Call me"><i class="fa fa-mobile fa-2x" aria-hidden="true"></i></a>
+          </div>
+          <div class="card__contact-container">
+            <a class="card__contact-email" href="" alt="Email me"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
+          </div>
+          <div class="card__contact-container">
+            <a class="card__contact-linkedin" href="" alt="Find me on linkedIn"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+          </div>
+          <div class="card__contact-container">
+            <a class="card__contact-github" href="" alt="I'm on GitHub!"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a>
+          </div>
+        </nav>
       </div>
     </div>
   </section>
-  <nav class="gen-main__data-form"></nav>
+  
   <!--DESIGN-->
 
   <nav class="gen-main__customize">
-    <!--de momento no se usa-->
+    
     <section class="gen-main__customize-design">
-      <!--de momento no se usa-->
+      
       <div class="customize-design__container">
-        <img
-          class="customize-design__container-logo"
-          src="./assets/images/design.svg"
-          alt="Share logo"
-        />
-        <h1 class="customize-design__container-title">Diseña</h1>
+        <img class="customize-design__container-logo" src="./assets/images/design.svg" alt="Share logo" />
+        <h2 class="customize-design__container-title">Diseña</h2>
         <!--cambiar los h1 a h2-->
         <!-- <div class="customize-design__container-crocodile"></div> -->
       </div>
-
-      <h2 class="customize-design__colors1-title">Colores</h2>
-      <section class="customize-design__colors1">
-        <div class="customize-design__colors1-selection"></div>
-        <div class="customize-design__colors1-boxes1"></div>
-        <div class="customize-design__colors1-boxes2"></div>
-        <div class="customize-design__colors1-boxes3"></div>
-      </section>
-
-      <section class="customize-design__colors2">
-        <div class="customize-design__colors2-selection"></div>
-        <div class="customize-design__colors2-boxes1"></div>
-        <div class="customize-design__colors2-boxes2"></div>
-        <div class="customize-design__colors2-boxes3"></div>
-      </section>
-      <section class="customize-design__colors3">
-        <div class="customize-design__colors3-selection"></div>
-        <div class="customize-design__colors3-boxes1"></div>
-        <div class="customize-design__colors3-boxes2"></div>
-        <div class="customize-design__colors3-boxes3"></div>
-      </section>
+      
+      <form class="customize-design__colors" action="" method="GET">
+        <lavel class="customize-design__colors1" for="colors1">
+          <h2 class="customize-design__colors1-title">Colores</h2>
+          <input class="customize-design__colors1-selection js-customize-design__colors1-selection" 
+          type="radio"       
+          id="colors1"
+          value="greenpalette"
+          name="colors">
+            <div class="customize-design__colors1-boxes1"></div>
+            <div class="customize-design__colors1-boxes2"></div>
+            <div class="customize-design__colors1-boxes3"></div>
+          </input>
+        </lavel>
+        <lavel class="customize-design__colors2" for="colors2">
+          <input class="customize-design__colors2-selection js-customize-design__colors1-selection" 
+          type="radio"
+          id="colors2"
+          value="orangepalette"
+          name="colors">
+            <div class="customize-design__colors2-boxes1"></div>
+            <div class="customize-design__colors2-boxes2"></div>
+            <div class="customize-design__colors2-boxes3"></div>
+          </input>
+        </lavel>
+        <lavel class="customize-design__colors3" for="colors3">
+          <input class="customize-design__colors3-selection js-customize-design__colors1-selection" 
+          type="radio"
+          id="colors3"
+          value="bluepalette"
+          name="colors">
+            <div class="customize-design__colors3-boxes1"></div>
+            <div class="customize-design__colors3-boxes2"></div>
+            <div class="customize-design__colors3-boxes3"></div>
+          </input>
+        </lavel>
+      </form>
     </section>
-
-  
+    <include src="./form.html"></include>
+    <include src="./share.html"></include>
   </nav>
 </main>

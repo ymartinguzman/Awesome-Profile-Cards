@@ -38,7 +38,7 @@
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.67;
+    line-height: 30px;
     text-transform: uppercase;
     letter-spacing: normal;
     color: $fontColor-tertiary;
@@ -47,11 +47,11 @@
     border-radius: 15px;
     border: solid 1px $fontColor-light;
     margin: 0 0 20px 0;
-    padding: 0px 0px 0px 25px;
+    padding: 0px 0px 0px 20px;
     background-image: url(../images/trash.svg);
     background-repeat: no-repeat;
     background-size: 12px;
-    background-position: 10px 5px;
+    background-position: left 10px bottom 7px;
     @include tablet {
       align-self: flex-start;
     }
@@ -92,10 +92,41 @@
     border-left: 5px solid $fontColor-blueish;
   }
   &__photo {
-    padding: 10px 0 0 0;
-    background-color: blueviolet;
     width: 240px;
     height: 200px;
+    margin: 10px 0 0 0;
+    position: relative;
+    @include image-carrousel;
+  }
+  &__img {
+    &-1, &-2, &-3, &-4, &-5 {
+      width: 100%;
+      position: absolute;
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+  &__contact {
+    display: flex;
+    padding: 10px 0 0 10px;
+    &-container {
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      border: solid 2px $fontColor-greenish;
+      text-align: center;
+      margin: 0 0 0 10px;
+    }
+    &-email, &-linkedin, &-github {
+      font-size: 9px;
+      color: $fontColor-secondary;
+      line-height: 32px;
+    }
+    &-call {
+      font-size: 12px;
+      color: $fontColor-secondary;
+      line-height: 36px;
+    } 
   }
 }
 
@@ -142,6 +173,10 @@
   }
 }
 
+.customize-design__colors{
+  margin-top: 22px;
+}
+
 .customize-design__colors1 {
   display: flex;
   flex-direction: row;
@@ -163,25 +198,28 @@
     width: 62px;
   }
   &-selection {
-    background: #438792;
+    background: $color-secondary;
     border-radius: 50%;
     width: 17px;
     height: 17px;
     margin-top: 32px;
     margin-left: 82px;
+    @include tablet {
+      margin-left: 129px;
+    }
   }
 
   &-boxes1 {
     width: 30px;
     height: 25px;
-    background-color: #114e4e;
+    background-color: $color-quaternay;
     margin-top: 28px;
     margin-left: 10px;
   }
   &-boxes2 {
     width: 30px;
     height: 25px;
-    background-color: #438792;
+    background-color: $color-secondary;
     margin-top: 28px;
   }
   &-boxes3 {
@@ -195,13 +233,13 @@
 .customize-design__colors2 {
   display: flex;
   flex-direction: row;
-  align-self: flex-end;
+  justify-content: flex-end;
   &-selection {
-    background: #438792;
+    background: $color-secondary;
     border-radius: 50%;
     width: 17px;
     height: 17px;
-    margin-top: 28px;
+    margin-top: 24px;
   }
   &-boxes1 {
     width: 30px;
@@ -227,13 +265,13 @@
 .customize-design__colors3 {
   display: flex;
   flex-direction: row;
-  align-self: flex-end;
+  justify-content: flex-end;
   &-selection {
-    background: #438792;
+    background: $color-secondary;
     border-radius: 50%;
     width: 17px;
     height: 17px;
-    margin-top: 28px;
+    margin-top: 24px;
   }
   &-boxes1 {
     width: 30px;
@@ -435,6 +473,8 @@
 .customize-share__web--hidden {
   font-family: $fontFamily-text;
   font-size: 12px;
+  width: 292px;
+  height: 17px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
