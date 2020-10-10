@@ -173,21 +173,33 @@
     width: 326.5px;
   }
   &-design {
-    margin-bottom: 30px;
+    margin-bottom: 7px;
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid $color-border;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
+    @include tablet {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
   }
   &-menu {
-    margin-bottom: 30px;
+    margin-bottom: 7px;
     border-bottom: 1px solid $color-border;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
+    @include tablet {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
   }
 }
 
 .customize-design__colors {
   margin-top: 22px;
+  margin-bottom: 30px;
+  @include tablet {
+    margin-bottom: 0px;
+  }
   &-title {
     text-transform: uppercase;
     font-size: 14px;
@@ -310,11 +322,10 @@
   font-weight: 600;
   text-transform: uppercase;
   display: flex;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 0px 0px;
   position: relative;
   @include tablet {
     align-items: center;
-    margin-bottom: 20px;
   }
   &-logo {
     width: 21px;
@@ -332,7 +343,7 @@
 
 .customize-menu__form {
   font-size: 14px;
-
+  margin-top: 20px;
   // font-weight: 00;
   /*me parece que es más gordita la letra*/
   &-label {
@@ -361,7 +372,9 @@
   }
   &-box {
     text-align: center;
-    margin: 30px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
     &--button {
       width: 140px;
       height: 30px;
@@ -374,13 +387,13 @@
       border-radius: 3px;
       border: rgba(#000, 0.3);
       padding: 5px 20px;
+      outline: none;
     }
     &-hidden {
       display: none;
     }
   }
   &-image {
-    margin: 0 auto;
     display: flex;
     justify-content: center;
     &--profile,
@@ -401,6 +414,12 @@
       margin-left: 15px;
     }
   }
+}
+
+.customize-menu__form-image--preview {
+  height: 30px;
+  width: 30px;
+  border: 1px solid #a2deaf;
 }
 
 //SHARE
@@ -556,10 +575,15 @@
     background-color: $color-primary;
   }
 }
+
+.customize-menu__form-image--profile {
+  display: none;
+}
 //JS
-.js__hidden {
+.js__hidden,
+.js__box-button-hidden {
   display: none;
 }
 .js__button-arrow {
-  transform: rotate(180deg);
+  transform: none;
 }
