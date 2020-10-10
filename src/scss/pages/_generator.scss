@@ -176,9 +176,13 @@
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid $color-border;
+    padding-bottom: 30px;
   }
   &-menu {
     margin-bottom: 30px;
+    border-bottom: 1px solid $color-border;
+    padding-bottom: 30px;
   }
 }
 
@@ -307,6 +311,7 @@
   text-transform: uppercase;
   display: flex;
   margin: 0px 0px 20px 0px;
+  position: relative;
   @include tablet {
     align-items: center;
     margin-bottom: 20px;
@@ -419,6 +424,7 @@
 }
 .customize-share__container {
   display: flex;
+  position: relative;
   &-title {
     font-family: $fontFamily-text;
     text-transform: uppercase;
@@ -536,7 +542,9 @@
 .js-hidden {
   display: none;
 }
-.customize-design__container-btn {
+.customize-design__container-btn,
+.customize-menu__container-btn,
+.customize-share__container-btn {
   background-image: url(../images/angle.svg);
   background-repeat: no-repeat;
   background-size: 16px 18px;
