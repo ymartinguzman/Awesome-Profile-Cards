@@ -1,4 +1,4 @@
-<main class="gen-main">
+  <main class="gen-main">
   <section class="gen-main__container">
     <div class="gen-main__container-inner">
       <button class="btn gen-main__btn--reset">Reset</button>
@@ -29,13 +29,13 @@
       </div>
     </div>
   </section>
-  <nav class="gen-main__data-form"></nav>
+  
   <!--DESIGN-->
 
   <nav class="gen-main__customize">
-    <!--de momento no se usa-->
+    
     <section class="gen-main__customize-design">
-      <!--de momento no se usa-->
+      
       <div class="customize-design__container">
         <img class="customize-design__container-logo" src="./assets/images/design.svg" alt="Share logo" />
         <h2 class="customize-design__container-title">Diseña</h2>
@@ -80,60 +80,7 @@
         </lavel>
       </form>
     </section>
-
-    <!-- FILL -->
-    <section class="gen-main__customize-menu">
-      <div class="customize-menu__container">
-        <img class="customize-menu__container-logo" src="./assets/images/keyboard.svg" alt="keyboard icon" />
-        <h1 class="customize-menu__container-title">Rellena</h1>
-      </div>
-
-      <form class="customize-menu__form" action="" method="post">
-        <label class="customize-menu__form-label" for="fullName">Nombre completo
-        </label>
-        <input class="customize-menu__form-input" placeholder="Ej: Sally Jill" type="text" required id="fullName" />
-        <!--desplegar opciones en placeholder?-->
-        <label class="customize-menu__form-label" for="position">Puesto</label>
-        <input class="customize-menu__form-input" placeholder="Ej: Front end" type="text" required id="position" />
-        <div>
-          <label class="customize-menu__form-label" for="fullName">Imagen de perfil</label>
-          <div class="customize-menu__form-box">
-            <!--añadir imagen sin div-->
-            <input class="customize-menu__form-box-button" value="Añadir imagen" type="submit" required />
-            <!--cambiar placeholder-->
-            <!--required??-->
-            <div class="menu__form--box"></div>
-          </div>
-        </div>
-        <label class="customize-menu__form-label" for="email">Email</label>
-        <input class="customize-menu__form-input" placeholder="Ej: sally.hill@gmail.com" type="email" required
-          id="email" />
-        <label class="customize-menu__form-label" for="telephone">Teléfono
-        </label>
-        <input class="customize-menu__form-input" placeholder="Ej: 555-555-555" type="tel" required id="telephone" />
-        <label class="customize-menu__form-label" for="linkedin">Linkedin
-        </label>
-        <input class="customize-menu__form-input" placeholder="Ej: linkedin.com/in/sally-hill" type="text" required
-          id="linkedin" />
-        <label class="customize-menu__form-label" for="github">Github </label>
-        <input class="customize-menu__form-input" placeholder="Ej: @sally-hill" type="text" required id="github" />
-      </form>
-    </section>
-
-    <!-- SHARE -->
-
-    <section class="gen-main__customize-share">
-      <div class="customize-share__container">
-        <img class="customize-share__container-logo" src="./assets/images/share.svg" alt="Design profile area" />
-        <h2 class="customize-share__container-title">Comparte</h2>
-        <!-- <div class="customize-share__container-crocodile"></div> -->
-      </div>
-      <a class="customize-share__button" title="Crear la tarjeta" href="">Crear tarjeta</a>
-    </section>
-    <section class="gen-main__customize-share--hidden">
-      <p class="customize-share__text--hidden">La tarjeta ha sido creada:</p>
-      <a class="customize-share__web--hidden" href="">https://awesome-profile-card.com?id=A456DF0001</a>
-      <a class="customize-share__twitter--hidden" href="">Compartir en twitter</a>
-    </section>
+    <include src="./form.html"></include>
+    <include src="./share.html"></include>
   </nav>
 </main>
