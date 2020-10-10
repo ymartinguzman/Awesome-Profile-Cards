@@ -538,13 +538,6 @@
     margin: 0;
   }
 }
-//JS
-.js__hidden {
-  display: none;
-}
-.js__button-arrow {
-  transform: rotate(180deg);
-}
 .customize-design__container-btn,
 .customize-menu__container-btn,
 .customize-share__container-btn {
@@ -558,7 +551,15 @@
   background-color: $fontColor-light;
   position: absolute;
   right: 0px;
+  outline: none;
   @include tablet {
     background-color: $color-primary;
   }
+}
+//JS
+.js__hidden {
+  display: none;
+}
+.js__button-arrow {
+  transform: rotate(180deg);
 }
