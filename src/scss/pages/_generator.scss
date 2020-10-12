@@ -560,13 +560,12 @@
 .customize-design__container-btn,
 .customize-menu__container-btn,
 .customize-share__container-btn {
-  background-image: url(../images/angle.svg);
+  background-image: url(../images/angle-down.svg);
   background-repeat: no-repeat;
   background-size: 16px 18px;
   width: 16px;
   height: 18px;
   border: none;
-  transform: rotate(180deg);
   background-color: $fontColor-light;
   position: absolute;
   right: 0px;
@@ -581,9 +580,14 @@
 }
 //JS
 .js__hidden,
-.js__box-button-hidden {
+.js__box-button-hidden,
+.js__hiddenlink {
   display: none;
 }
 .js__button-arrow {
-  transform: none;
+  transform: rotate(180deg);
+}
+
+.js-cardCreated {
+  background-color: #d5d5d5;
 }
