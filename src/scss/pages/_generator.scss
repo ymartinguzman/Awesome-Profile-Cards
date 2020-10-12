@@ -383,6 +383,7 @@
     margin: 0 auto;
     display: flex;
     justify-content: center;
+
     &--profile,
     &--preview {
       background-position: center;
@@ -393,12 +394,14 @@
     &--profile {
       width: 300px;
       height: 300px;
+      display: none;
     }
 
     &--preview {
-      width: 50px;
-      height: 50px;
+      width: 30px;
+      height: 30px;
       margin-left: 15px;
+      border: solid 1px #a2deaf;
     }
   }
 }
@@ -439,15 +442,6 @@
     width: 21px;
     height: 18px;
   }
-
-  // &-crocodile {
-  //   justify-content: right;
-  //   width: 16px;
-  //   height: 18px;
-  //   transform: rotate(-90deg);
-  //   color: $fontColor-tertiary;
-  //   margin-left: 137px;
-  //  }
 }
 
 .customize-share__button {
