@@ -1,6 +1,5 @@
 .gen-main {
   width: 100%;
-  padding: 0px 20px 0px 20px;
   @include tablet {
     background-color: #f5f5f5;
     padding: 20px 40px 20px 40px;
@@ -9,7 +8,9 @@
     grid-template-rows: auto;
     grid-gap: 30px;
   }
-
+  &__customize {
+    padding: 0px 20px 0px 20px;
+  }
   &__container {
     background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
     height: 460px;
@@ -38,7 +39,7 @@
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.67;
+    line-height: 30px;
     text-transform: uppercase;
     letter-spacing: normal;
     color: $fontColor-tertiary;
@@ -47,11 +48,11 @@
     border-radius: 15px;
     border: solid 1px $fontColor-light;
     margin: 0 0 20px 0;
-    padding: 0px 0px 0px 25px;
+    padding: 0px 0px 0px 20px;
     background-image: url(../images/trash.svg);
     background-repeat: no-repeat;
     background-size: 12px;
-    background-position: 10px 5px;
+    background-position: left 10px bottom 7px;
     @include tablet {
       align-self: flex-start;
     }
@@ -92,10 +93,47 @@
     border-left: 5px solid $fontColor-blueish;
   }
   &__photo {
-    padding: 10px 0 0 0;
-    background-color: blueviolet;
     width: 240px;
     height: 200px;
+    margin: 10px 0 0 0;
+    position: relative;
+    @include image-carrousel;
+  }
+  &__img {
+    &-1,
+    &-2,
+    &-3,
+    &-4,
+    &-5 {
+      width: 100%;
+      position: absolute;
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+  &__contact {
+    display: flex;
+    padding: 10px 0 0 10px;
+    &-container {
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      border: solid 2px $fontColor-greenish;
+      text-align: center;
+      margin: 0 0 0 10px;
+    }
+    &-email,
+    &-linkedin,
+    &-github {
+      font-size: 9px;
+      color: $fontColor-secondary;
+      line-height: 32px;
+    }
+    &-call {
+      font-size: 12px;
+      color: $fontColor-secondary;
+      line-height: 36px;
+    }
   }
 }
 
@@ -103,6 +141,8 @@
   display: flex;
   flex-direction: row;
   margin-top: 30px;
+  position: relative;
+
   &-title {
     font-family: $fontFamily-text;
     text-transform: uppercase;
@@ -133,21 +173,33 @@
     width: 326.5px;
   }
   &-design {
-    margin-bottom: 30px;
+    margin-bottom: 7px;
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid $color-border;
+    padding-bottom: 10px;
+    @include tablet {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
   }
   &-menu {
-    margin-bottom: 30px;
+    margin-bottom: 7px;
+    border-bottom: 1px solid $color-border;
+    padding-bottom: 10px;
+    @include tablet {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
   }
 }
 
-.customize-design__colors1 {
-  display: flex;
-  flex-direction: row;
-  align-self: flex-end;
-  margin-top: -35px;
-
+.customize-design__colors {
+  margin-top: 22px;
+  margin-bottom: 30px;
+  @include tablet {
+    margin-bottom: 0px;
+  }
   &-title {
     text-transform: uppercase;
     font-size: 14px;
@@ -158,12 +210,20 @@
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    margin-top: 22px;
     margin-left: 19px;
     width: 62px;
   }
+}
+
+.customize-design__colors1 {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  margin-top: -35px;
+  justify-content: flex-end;
+
   &-selection {
-    background: #438792;
+    background: $color-secondary;
     border-radius: 50%;
     width: 17px;
     height: 17px;
@@ -174,14 +234,14 @@
   &-boxes1 {
     width: 30px;
     height: 25px;
-    background-color: #114e4e;
+    background-color: $color-quaternay;
     margin-top: 28px;
     margin-left: 10px;
   }
   &-boxes2 {
     width: 30px;
     height: 25px;
-    background-color: #438792;
+    background-color: $color-secondary;
     margin-top: 28px;
   }
   &-boxes3 {
@@ -195,13 +255,13 @@
 .customize-design__colors2 {
   display: flex;
   flex-direction: row;
-  align-self: flex-end;
+  justify-content: flex-end;
   &-selection {
-    background: #438792;
+    background: $color-secondary;
     border-radius: 50%;
     width: 17px;
     height: 17px;
-    margin-top: 28px;
+    margin-top: 24px;
   }
   &-boxes1 {
     width: 30px;
@@ -227,13 +287,13 @@
 .customize-design__colors3 {
   display: flex;
   flex-direction: row;
-  align-self: flex-end;
+  justify-content: flex-end;
   &-selection {
-    background: #438792;
+    background: $color-secondary;
     border-radius: 50%;
     width: 17px;
     height: 17px;
-    margin-top: 28px;
+    margin-top: 24px;
   }
   &-boxes1 {
     width: 30px;
@@ -262,10 +322,10 @@
   font-weight: 600;
   text-transform: uppercase;
   display: flex;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 0px 0px;
+  position: relative;
   @include tablet {
     align-items: center;
-    margin-bottom: 20px;
   }
   &-logo {
     width: 21px;
@@ -283,7 +343,7 @@
 
 .customize-menu__form {
   font-size: 14px;
-
+  margin-top: 20px;
   // font-weight: 00;
   /*me parece que es más gordita la letra*/
   &-label {
@@ -311,28 +371,61 @@
     color: #c5c5c5;
   }
   &-box {
+    text-align: center;
     display: flex;
-    width: 30px;
-    height: 30px;
-    border: solid 1px #a2deaf;
-    outline-color: #a2deaf;
-    margin: 0px 0px 20px 0px;
-
-    &-button {
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    &--button {
       width: 140px;
       height: 30px;
       font-family: $fontFamily-text;
       line-height: 21px;
-      background-color: #e17334;
+      background: $fontColor-main;
       font-size: 14px;
-      color: #ffffff;
+      color: $fontColor-light;
       padding: 3px 22px 7px 22px;
       border-radius: 3px;
-      border: rgba(0, 0, 0, 0.32);
-      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+      border: rgba(#000, 0.3);
+      padding: 5px 20px;
+      outline: none;
+    }
+    &-hidden {
+      display: none;
+    }
+  }
+  &-image {
+    display: flex;
+    justify-content: center;
+
+    &--profile,
+    &--preview {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 1px solid #ccc;
+    }
+    &--profile {
+      width: 300px;
+      height: 300px;
+      display: none;
+    }
+
+    &--preview {
+      width: 30px;
+      height: 30px;
+      margin-left: 15px;
+      border: solid 1px #a2deaf;
     }
   }
 }
+
+.customize-menu__form-image--preview {
+  height: 30px;
+  width: 30px;
+  border: 1px solid #a2deaf;
+}
+
+//SHARE
 
 .gen-main__customize-share {
   display: flex;
@@ -353,6 +446,7 @@
 }
 .customize-share__container {
   display: flex;
+  position: relative;
   &-title {
     font-family: $fontFamily-text;
     text-transform: uppercase;
@@ -367,15 +461,6 @@
     width: 21px;
     height: 18px;
   }
-
-  // &-crocodile {
-  //   justify-content: right;
-  //   width: 16px;
-  //   height: 18px;
-  //   transform: rotate(-90deg);
-  //   color: $fontColor-tertiary;
-  //   margin-left: 137px;
-  //  }
 }
 
 .customize-share__button {
@@ -413,6 +498,8 @@
 .customize-share__web--hidden {
   font-family: $fontFamily-text;
   font-size: 12px;
+  width: 292px;
+  height: 17px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
@@ -463,4 +550,38 @@
   @include tablet {
     margin: 0;
   }
+}
+.customize-design__container-btn,
+.customize-menu__container-btn,
+.customize-share__container-btn {
+  background-image: url(../images/angle-down.svg);
+  background-repeat: no-repeat;
+  background-size: 16px 18px;
+  width: 16px;
+  height: 18px;
+  border: none;
+  background-color: $fontColor-light;
+  position: absolute;
+  right: 0px;
+  outline: none;
+  @include tablet {
+    background-color: $color-primary;
+  }
+}
+
+.customize-menu__form-image--profile {
+  display: none;
+}
+//JS
+.js__hidden,
+.js__box-button-hidden,
+.js__hiddenlink {
+  display: none;
+}
+.js__button-arrow {
+  transform: rotate(180deg);
+}
+
+.js-cardCreated {
+  background-color: #d5d5d5;
 }
