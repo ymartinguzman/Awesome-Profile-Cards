@@ -137,6 +137,36 @@
   }
 }
 
+.palette-1  .card__name-surname .js-icons{
+  color: $color-quaternay;
+}
+.palette-2  .card__name-surname .js-icons{
+  color: $color-deepred;
+}
+.palette-3  .card__name-surname .js-icons{
+  color: $color-darkturquoise;
+}
+
+.palette-1 .card__name-surname .card__occupation{
+  border-color: $color-secondary;
+}
+.palette-2 .card__name-surname .card__occupation{
+  color: $color-ferrarired;
+}
+.palette-3 .card__name-surname .card__occupation{
+  color: $color-goldenorange;
+}
+
+.palette-1 .card__contact-container{
+  border-color: $color-greenish;
+}
+.palette-2 .card__contact-container{
+  border-color: $color-orange;
+}
+.palette-3 .card__contact-container{
+  border-color: $color-lightgrey;
+}
+
 .customize-design__container {
   display: flex;
   flex-direction: row;

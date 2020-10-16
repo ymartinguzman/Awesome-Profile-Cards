@@ -79,3 +79,20 @@ function hideSection(event){
 buttonDesig.addEventListener('click', hideSection);
 buttonFill.addEventListener('click', hideSection);
 buttonShare.addEventListener('click', hideSection);
+
+
+'use strict';
+//CARD DESIGN
+
+
+const cardPaletteContainer1 = document.querySelector(".customize-design__colors1");
+const cardPaletteContainer2 = document.querySelector(".customize-design__colors2");
+const cardPaletteContainer3 = document.querySelector(".customize-design__colors3");
+let paletteArray = [];
+paletteArray.push(cardPaletteContainer1, cardPaletteContainer2, cardPaletteContainer3);
+
+console.log(paletteArray);
+
+//for (const container of paletteArray) {
+//  container.classList.add("");
+//}
