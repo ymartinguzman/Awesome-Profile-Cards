@@ -37,7 +37,6 @@ function collapseMenu(ev) {
     if (ev.currentTarget === buttonContainer[i]) {
       sectionContainer[i].classList.toggle("js__hidden");
       buttonArrow[i].classList.toggle("js__button-arrow");
-      // console.log("jola");
     } else {
       sectionContainer[i].classList.add("js__hidden");
       buttonArrow[i].classList.remove("js__button-arrow");
@@ -52,5 +51,6 @@ const hiddenLink = document.querySelector(".js-sectionHidden");
 function createCard(event) {
   hiddenLink.classList.remove("js__hiddenlink");
   event.preventDefault();
+  btnCreate.classList.add("js-cardCreated");
 }
 btnCreate.addEventListener("click", createCard);
