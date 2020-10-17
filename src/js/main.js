@@ -42,9 +42,6 @@ function collapseMenu(ev) {
       sectionContainer[i].classList.add("js__hidden");
       buttonArrow[i].classList.remove("js__button-arrow");
     }
-    if (ev.currentTarget === buttonContainer[2]) {
-      btnCreate.classList.toggle("js__hidden");
-    }
   }
 }
 for (const buttonCollapse of buttonContainer) {
