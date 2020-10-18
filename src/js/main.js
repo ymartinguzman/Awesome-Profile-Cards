@@ -85,14 +85,23 @@ buttonShare.addEventListener('click', hideSection);
 //CARD DESIGN
 
 
-const cardPaletteContainer1 = document.querySelector(".customize-design__colors1");
-const cardPaletteContainer2 = document.querySelector(".customize-design__colors2");
-const cardPaletteContainer3 = document.querySelector(".customize-design__colors3");
-let paletteArray = [];
-paletteArray.push(cardPaletteContainer1, cardPaletteContainer2, cardPaletteContainer3);
+/*const cardPaletteContainer1 = document.querySelector('.customize-design__colors1');
+const cardPaletteContainer2 = document.querySelector('.customize-design__colors2');
+const cardPaletteContainer3 = document.querySelector('.customize-design__colors3');
 
-console.log(paletteArray);
+const palette1 = document.querySelector('.palette-1');
+const palette2 = document.querySelector('.palette-2');
+const palette3 = document.querySelector('.palette-3');*/
 
-//for (const container of paletteArray) {
-//  container.classList.add("");
-//}
+const designColors = document.querySelectorAll('.js-customize-design__colors');
+const firstChange = document.querySelector('.card__name-surname' , '.js-icons');
+
+function stylePicker() {
+  let elementId = event.currentTarget.id;
+  let lastLetter = elementId.str.slice(-1);
+  let palette =`.palette-${lastLetter}`;
+  console.log(palette);
+}
+
+
+designColors.addEventListener('click', stylePicker);
