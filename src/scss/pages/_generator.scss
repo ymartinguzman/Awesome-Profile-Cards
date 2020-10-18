@@ -137,23 +137,23 @@
   }
 }
 
-.palette-1  .card__name-surname .js-icons{
+.palette-1 .card__name-surname, .palette-1 .js-icons{
   color: $color-quaternay;
 }
-.palette-2  .card__name-surname .js-icons{
+.palette-2 .card__name-surname, .palette-2 .js-icons{
   color: $color-deepred;
 }
-.palette-3  .card__name-surname .js-icons{
+.palette-3 .card__name-surname, .palette-3 .js-icons{
   color: $color-darkturquoise;
 }
 
-.palette-1 .card__name-surname .card__occupation{
+.palette-1 .card__name-surname, .palette-1 .card__occupation{
   border-color: $color-secondary;
 }
-.palette-2 .card__name-surname .card__occupation{
+.palette-2 .card__name-surname, .palette-2 .card__occupation{
   color: $color-ferrarired;
 }
-.palette-3 .card__name-surname .card__occupation{
+.palette-3 .card__name-surname, .palette-3 .card__occupation{
   color: $color-goldenorange;
 }
 

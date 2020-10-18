@@ -94,13 +94,14 @@ const palette2 = document.querySelector('.palette-2');
 const palette3 = document.querySelector('.palette-3');*/
 
 const designColors = document.querySelectorAll('.js-customize-design__colors');
-const firstChange = document.querySelector('.card__name-surname' , '.js-icons');
+
 
 function stylePicker() {
   let elementId = event.currentTarget.id;
   let lastLetter = elementId.str.slice(-1);
   let palette =`.palette-${lastLetter}`;
   console.log(palette);
+  return 
 }
 
 
