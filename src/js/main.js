@@ -94,15 +94,29 @@ const palette2 = document.querySelector('.palette-2');
 const palette3 = document.querySelector('.palette-3');*/
 
 const designColors = document.querySelectorAll('.js-customize-design__colors');
+const nameSurname = document.querySelector('.card__name-surname');
+const cardContactContainer = document.querySelector('.card__contact-container');
+const cardOccupation = document.querySelector('.card__occupation');
+const cardIcons = document.querySelector ('.js-icons');
 
 
 function stylePicker() {
   let elementId = event.currentTarget.id;
   let lastLetter = elementId.str.slice(-1);
-  let palette =`.palette-${lastLetter}`;
+  let palette =`palette-${lastLetter}`;
   console.log(palette);
-  return 
+  nameSurname.classList.remove('palette-1', 'palette-2', 'palette-3');
+  nameSurname.classList.add(palette);
+  cardContactContainer.classList.remove('palette-1', 'palette-2', 'palette-3');
+  cardContactContainer.classList.add(palette);
+  cardOccupation.classList.remove('palette-1', 'palette-2', 'palette-3');
+  cardOccupation.classList.add(palette);
+  cardIcons.classList.remove('palette-1', 'palette-2', 'palette-3');
+  cardIcons.classList.add(palette);
+
+
 }
+
 
 
 designColors.addEventListener('click', stylePicker);
