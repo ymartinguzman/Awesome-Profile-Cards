@@ -113,8 +113,6 @@ function stylePicker() {
   cardOccupation.classList.add(palette);
   cardIcons.classList.remove('palette-1', 'palette-2', 'palette-3');
   cardIcons.classList.add(palette);
-
-
 }
 
 
