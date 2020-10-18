@@ -84,15 +84,6 @@ buttonShare.addEventListener('click', hideSection);
 'use strict';
 //CARD DESIGN
 
-
-/*const cardPaletteContainer1 = document.querySelector('.customize-design__colors1');
-const cardPaletteContainer2 = document.querySelector('.customize-design__colors2');
-const cardPaletteContainer3 = document.querySelector('.customize-design__colors3');
-
-const palette1 = document.querySelector('.palette-1');
-const palette2 = document.querySelector('.palette-2');
-const palette3 = document.querySelector('.palette-3');*/
-
 const designColors = document.querySelectorAll('.js-customize-design__colors');
 const nameSurname = document.querySelector('.card__name-surname');
 const cardContactContainer = document.querySelector('.card__contact-container');
@@ -103,8 +94,7 @@ const cardIcons = document.querySelector ('.js-icons');
 function stylePicker() {
   let elementId = event.currentTarget.id;
   let lastLetter = elementId.str.slice(-1);
-  let palette =`palette-${lastLetter}`;
-  console.log(palette);
+  let palette =`"palette-${lastLetter}"`;
   nameSurname.classList.remove('palette-1', 'palette-2', 'palette-3');
   nameSurname.classList.add(palette);
   cardContactContainer.classList.remove('palette-1', 'palette-2', 'palette-3');
@@ -114,7 +104,5 @@ function stylePicker() {
   cardIcons.classList.remove('palette-1', 'palette-2', 'palette-3');
   cardIcons.classList.add(palette);
 }
-
-
 
 designColors.addEventListener('click', stylePicker);
