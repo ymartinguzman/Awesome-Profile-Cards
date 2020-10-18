@@ -137,33 +137,33 @@
   }
 }
 
-.palette-1 .card__name-surname, .palette-1 .js-icons{
+.card__name-surname.palette-1, .js-icons.palette-1 {
   color: $color-quaternay;
 }
-.palette-2 .card__name-surname, .palette-2 .js-icons{
+.card__name-surname.palette-2, .js-icons.palette-2{
   color: $color-deepred;
 }
-.palette-3 .card__name-surname, .palette-3 .js-icons{
+.card__name-surname.palette-3, .js-icons.palette-3 {
   color: $color-darkturquoise;
 }
 
-.palette-1 .card__name-surname, .palette-1 .card__occupation{
+.card__name-surname.palette-1, .card__occupation.palette-1 {
   border-color: $color-secondary;
 }
-.palette-2 .card__name-surname, .palette-2 .card__occupation{
+.card__name-surname.palette-2, .card__occupation.palette-2 { 
   border-color: $color-ferrarired;
 }
-.palette-3 .card__name-surname, .palette-3 .card__occupation{
+.card__name-surname.palette-3, .card__occupation.palette-3 {
   border-color: $color-goldenorange;
 }
 
-.palette-1 .card__contact-container{
+.card__contact-container.palette-1 {
   border-color: $color-greenish;
 }
-.palette-2 .card__contact-container{
+.card__contact-container.palette-2 {
   border-color: $color-orange;
 }
-.palette-3 .card__contact-container{
+.card__contact-containeryass.palette-3 {
   border-color: $color-lightgrey;
 }
 

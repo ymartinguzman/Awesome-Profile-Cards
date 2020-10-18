@@ -84,39 +84,66 @@ buttonShare.addEventListener('click', hideSection);
 'use strict';
 //CARD DESIGN
 
+function activateClass(element, classname) {
+  element.classList.remove('palette-1', 'palette-2', 'palette-3');
+  element.classList.add(classname);
+}
 
-/*const cardPaletteContainer1 = document.querySelector('.customize-design__colors1');
-const cardPaletteContainer2 = document.querySelector('.customize-design__colors2');
-const cardPaletteContainer3 = document.querySelector('.customize-design__colors3');
+function stylePicker(event) {
+  let elementId = event.currentTarget.id;
+  let lastLetter = elementId.slice(-1);
+  let palette =`palette-${lastLetter}`;
 
-const palette1 = document.querySelector('.palette-1');
-const palette2 = document.querySelector('.palette-2');
-const palette3 = document.querySelector('.palette-3');*/
+  const nameSurname = document.querySelector('.card__name-surname');
+  const cardOccupation = document.querySelector('.card__occupation');
+  const cardContactContainer = document.querySelectorAll('.card__contact-container');
+  const cardIcons = document.querySelectorAll('.js-icons');
+
+  activateClass(nameSurname, palette);
+  activateClass(cardOccupation, palette);
+  for (let contactContainer of cardContactContainer) {
+    activateClass(contactContainer, palette);
+  }
+  for (let icon of cardIcons) {
+    activateClass(icon, palette);
+  }
+}
 
 const designColors = document.querySelectorAll('.js-customize-design__colors');
-const nameSurname = document.querySelector('.card__name-surname');
-const cardContactContainer = document.querySelector('.card__contact-container');
-const cardOccupation = document.querySelector('.card__occupation');
-const cardIcons = document.querySelector ('.js-icons');
-
-
-function stylePicker() {
-  let elementId = event.currentTarget.id;
-  let lastLetter = elementId.str.slice(-1);
-  let palette =`.palette-${lastLetter}`;
-  console.log(palette);
-  nameSurname.classList.remove('palette-1', 'palette-2', 'palette-3');
-  nameSurname.classList.add(palette);
-  cardContactContainer.classList.remove('palette-1', 'palette-2', 'palette-3');
-  cardContactContainer.classList.add(palette);
-  cardOccupation.classList.remove('palette-1', 'palette-2', 'palette-3');
-  cardOccupation.classList.add(palette);
-  cardIcons.classList.remove('palette-1', 'palette-2', 'palette-3');
-  cardIcons.classList.add(palette);
-
-
+for (let designColor of designColors) {
+  designColor.addEventListener('click', stylePicker);
 }
 
 
+// Código sin convertir sus elementos repetitivos add-remove en una función:
 
-designColors.addEventListener('click', stylePicker);
+
+// const nameSurname = document.querySelector('.card__name-surname');
+// const cardContactContainer = document.querySelectorAll('.card__contact-container');
+// const cardOccupation = document.querySelector('.card__occupation');
+// const cardIcons = document.querySelectorAll('.js-icons');
+
+
+// function stylePicker(event) {
+//   let elementId = event.currentTarget.id;
+//   let lastLetter = elementId.slice(-1);
+//   let palette =`palette-${lastLetter}`;
+//   nameSurname.classList.remove('palette', 'palette-2', 'palette-3');
+//   nameSurname.classList.add(palette);
+//   for (let contactContainer of cardContactContainer) {
+//     contactContainer.classList.remove('palette-1', 'palette-2', 'palette-3');
+//     contactContainer.classList.add(palette);
+//   }
+//   cardOccupation.classList.remove('palette-1', 'palette-2', 'palette-3');
+//   cardOccupation.classList.add(palette);
+//   for (let icon of cardIcons) {
+//     icon.classList.remove('palette-1', 'palette-2', 'palette-3');
+//     icon.classList.add(palette);
+//   }
+// }
+
+
+// const designColors = document.querySelectorAll('.js-customize-design__colors');
+// for (let i = 0; i < designColors.length; i++) {
+//   designColors[i].addEventListener('click', stylePicker);
+// }
