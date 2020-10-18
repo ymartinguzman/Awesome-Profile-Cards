@@ -103,7 +103,7 @@ const cardIcons = document.querySelector ('.js-icons');
 function stylePicker() {
   let elementId = event.currentTarget.id;
   let lastLetter = elementId.str.slice(-1);
-  let palette =`palette-${lastLetter}`;
+  let palette =`.palette-${lastLetter}`;
   console.log(palette);
   nameSurname.classList.remove('palette-1', 'palette-2', 'palette-3');
   nameSurname.classList.add(palette);
@@ -113,6 +113,8 @@ function stylePicker() {
   cardOccupation.classList.add(palette);
   cardIcons.classList.remove('palette-1', 'palette-2', 'palette-3');
   cardIcons.classList.add(palette);
+
+
 }
 
 
