@@ -1,15 +1,15 @@
-"use strict";
+'use strict';
 //BOTON AÑADIR IMAGEN
 
 const fr = new FileReader();
-const uploadBtn = document.querySelector(".js__box-button");
-const fileField = document.querySelector(".js__box-button-hidden");
-const profileImage = document.querySelector(".js__profile-image");
-const profilePreview = document.querySelector(".js__profile-preview");
+const uploadBtn = document.querySelector('.js__box-button');
+const fileField = document.querySelector('.js__box-button-hidden');
+const profileImage = document.querySelector('.js__profile-image');
+const profilePreview = document.querySelector('.js__profile-preview');
 
 function getImage(e) {
   const myFile = e.currentTarget.files[0];
-  fr.addEventListener("load", writeImage);
+  fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
 }
 
@@ -22,42 +22,40 @@ function fakeFileClick() {
   fileField.click();
 }
 
-uploadBtn.addEventListener("click", fakeFileClick);
-fileField.addEventListener("change", getImage);
+uploadBtn.addEventListener('click', fakeFileClick);
+fileField.addEventListener('change', getImage);
 
 //DESPLEGABLES
 
-const buttonContainer = document.querySelectorAll(".js-collapsable");
-const sectionContainer = document.querySelectorAll(".js-section");
-const buttonArrow = document.querySelectorAll(".js-arrow");
+const buttonContainer = document.querySelectorAll('.js-collapsable');
+const sectionContainer = document.querySelectorAll('.js-section');
+const buttonArrow = document.querySelectorAll('.js-arrow');
 
-const btnCreate = document.querySelector(".js-createBtn");
+const btnCreate = document.querySelector('.js-createBtn');
 function collapseMenu(ev) {
   for (let i = 0; i < buttonContainer.length; i++) {
     if (ev.currentTarget === buttonContainer[i]) {
-      sectionContainer[i].classList.toggle("js__hidden");
-      buttonArrow[i].classList.toggle("js__button-arrow");
+      sectionContainer[i].classList.toggle('js__hidden');
+      buttonArrow[i].classList.toggle('js__button-arrow');
     } else {
-      sectionContainer[i].classList.add("js__hidden");
-      buttonArrow[i].classList.remove("js__button-arrow");
+      sectionContainer[i].classList.add('js__hidden');
+      buttonArrow[i].classList.remove('js__button-arrow');
     }
   }
 }
 for (const buttonCollapse of buttonContainer) {
-  buttonCollapse.addEventListener("click", collapseMenu);
+  buttonCollapse.addEventListener('click', collapseMenu);
 }
 
-const hiddenLink = document.querySelector(".js-sectionHidden");
+const hiddenLink = document.querySelector('.js-sectionHidden');
 function createCard(event) {
-  hiddenLink.classList.remove("js__hiddenlink");
+  hiddenLink.classList.remove('js__hiddenlink');
   event.preventDefault();
-  btnCreate.classList.add("js-cardCreated");
+  btnCreate.classList.add('js-cardCreated');
 }
-btnCreate.addEventListener("click", createCard);
+btnCreate.addEventListener('click', createCard);
 
-
-
-'use strict';
+('use strict');
 //CARD DESIGN
 
 function activateClass(element, classname) {
@@ -68,11 +66,13 @@ function activateClass(element, classname) {
 function stylePicker(event) {
   let elementId = event.currentTarget.id;
   let lastLetter = elementId.slice(-1);
-  let palette =`palette-${lastLetter}`;
+  let palette = `palette-${lastLetter}`;
 
   const nameSurname = document.querySelector('.card__name-surname');
   const cardOccupation = document.querySelector('.card__occupation');
-  const cardContactContainer = document.querySelectorAll('.card__contact-container');
+  const cardContactContainer = document.querySelectorAll(
+    '.card__contact-container'
+  );
   const cardIcons = document.querySelectorAll('.js-icons');
 
   activateClass(nameSurname, palette);
@@ -90,7 +90,6 @@ for (let designColor of designColors) {
   designColor.addEventListener('click', stylePicker);
 }
 
-
 const data = {
   name: '',
   job: '',
@@ -99,20 +98,35 @@ const data = {
   phone: '',
   linkedin: '',
   github: '',
+};
+
+if (localStorage.getItem('form')) {
+  JSON.parse(localStorage.getItem('form'));
 }
 
-const saveData  = function (event)  {
+const saveData = function (event) {
   const inputData = event.currentTarget.name;
   data[inputData] = event.currentTarget.value;
   render();
 };
 
 const render = function () {
-  document.querySelector('.js-nameSurname').innerHTML = data.name || "Nombre Apellido";
-  document.querySelector('.js-image').href = "" + data.link;
-  document.querySelector('.js-phone').innerHTML = data.name || "Nombre Apellido";
-  document.querySelector('.js-email').innerHTML = data.name || "Nombre Apellido";
-  document.querySelector('.js-linkedin').href = "" + data.link;
-  document.querySelector('.js-github').href = "" + data.link;
+  document.querySelector('.js-nameSurname').innerHTML =
+    data.name || 'Nombre Apellido';
+  document.querySelector('.js-occupation').innerHTML =
+    data.job || 'Front-end developer';
+  // document.querySelector('.js-image').innerHTML = `<img src="${data.image}">`;
+  document.querySelector('.js-phone').href = 'tel:' + data.phone;
+  document.querySelector('.js-email').href = 'mailto:' + data.email;
+  document.querySelector('.js-linkedin').href =
+    'https://www.linkedin.com/in/' + data.linkedin;
+  document.querySelector('.js-github').href =
+    'https://www.github.com/' + data.github;
 
+  localStorage.setItem('form', JSON.stringify(data));
+};
+
+const inputList = document.querySelectorAll('.js-input');
+for (const inputItem of inputList) {
+  inputItem.addEventListener('keyup', saveData);
 }
