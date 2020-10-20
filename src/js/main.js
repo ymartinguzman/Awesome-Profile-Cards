@@ -91,3 +91,28 @@ for (let designColor of designColors) {
 }
 
 
+const data = {
+  name: '',
+  job: '',
+  email: '',
+  image: '',
+  phone: '',
+  linkedin: '',
+  github: '',
+}
+
+const saveData  = function (event)  {
+  const inputData = event.currentTarget.name;
+  data[inputData] = event.currentTarget.value;
+  render();
+};
+
+const render = function () {
+  document.querySelector('.js-nameSurname').innerHTML = data.name || "Nombre Apellido";
+  document.querySelector('.js-image').href = "" + data.link;
+  document.querySelector('.js-phone').innerHTML = data.name || "Nombre Apellido";
+  document.querySelector('.js-email').innerHTML = data.name || "Nombre Apellido";
+  document.querySelector('.js-linkedin').href = "" + data.link;
+  document.querySelector('.js-github').href = "" + data.link;
+
+}
