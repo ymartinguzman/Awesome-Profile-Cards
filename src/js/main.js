@@ -147,3 +147,4 @@ for (let designColor of designColors) {
 // for (let i = 0; i < designColors.length; i++) {
 //   designColors[i].addEventListener('click', stylePicker);
 // }
+
