@@ -137,6 +137,36 @@
   }
 }
 
+.card__name-surname.palette-1, .js-icons.palette-1 {
+  color: $color-quaternay;
+}
+.card__name-surname.palette-2, .js-icons.palette-2{
+  color: $color-deepred;
+}
+.card__name-surname.palette-3, .js-icons.palette-3 {
+  color: $color-darkturquoise;
+}
+
+.card__name-surname.palette-1, .card__occupation.palette-1 {
+  border-color: $color-secondary;
+}
+.card__name-surname.palette-2, .card__occupation.palette-2 { 
+  border-color: $color-ferrarired;
+}
+.card__name-surname.palette-3, .card__occupation.palette-3 {
+  border-color: $color-goldenorange;
+}
+
+.card__contact-container.palette-1 {
+  border-color: $color-greenish;
+}
+.card__contact-container.palette-2 {
+  border-color: $color-orange;
+}
+.card__contact-containeryass.palette-3 {
+  border-color: $color-lightgrey;
+}
+
 .customize-design__container {
   display: flex;
   flex-direction: row;
