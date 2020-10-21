@@ -18,6 +18,7 @@ function writeImage() {
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
   div.classList.add('js__hidden');
+  localStorage.setItem('photo', fr.result);
 }
 
 function fakeFileClick() {
@@ -143,11 +144,13 @@ const getDataFromLocalStorage = function () {
         input.value = data[inputKey];
       }
     }
+    profileImage.style.backgroundImage = `url(${localStorage.getItem('photo')})`;
     render();
   }
 };
 
 getDataFromLocalStorage();
+
 
 const resetButton  = document.querySelector('.js-reset');
 const handleReset = function () {
