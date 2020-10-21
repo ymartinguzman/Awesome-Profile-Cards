@@ -144,9 +144,9 @@ const getDataFromLocalStorage = function () {
         input.value = data[inputKey];
       }
     }
-    profileImage.style.backgroundImage = `url(${localStorage.getItem(
-      'photo'
-    )})`;
+    // profileImage.style.backgroundImage = `url(${localStorage.getItem(
+    //   'photo'
+    // )})`;
     render();
   }
 };
