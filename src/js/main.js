@@ -148,3 +148,19 @@ const getDataFromLocalStorage = function () {
 };
 
 getDataFromLocalStorage();
+
+const resetButton  = document.querySelector('.js-reset');
+const handleReset = function () {
+    data.name = '';
+    data.job = '';
+    data.email = '';
+    data.phone = '';
+    data.linkedin = '';
+    data.github = '';
+  for (const input of inputList) {
+    input.value = '';
+  }
+  render();
+}
+
+resetButton.addEventListener('click', handleReset);
