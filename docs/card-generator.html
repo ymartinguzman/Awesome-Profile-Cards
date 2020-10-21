@@ -26,14 +26,14 @@
   </head>
   <body>
     <header class="header">
-      <a href="./index.html"
-        ><img
-          src="./assets/images/logo-awesome-profile-cards.svg"
-          alt="Logo Awesome Profile Cards"
-          title="Awesome Profile Cards"
-          class="header__logo"
-      /></a>
+      <a href="./index.html"><img
+      src="./assets/images/logo-awesome-profile-cards.svg"
+      alt="Logo Awesome Profile Cards"
+      title="Awesome Profile Cards"
+      class="header__logo"
+    /></a>
     </header>
+
 
     <main class="gen-main">
       <section class="gen-main__container">
@@ -117,23 +117,27 @@
 
       <nav class="gen-main__customize">
         <section class="gen-main__customize-design">
-          <div class="customize-design__container">
+          <div class="customize-design__container js-collapsable">
             <img
               class="customize-design__container-logo"
               src="./assets/images/design.svg"
               alt="Share logo"
             />
             <h2 class="customize-design__container-title">Diseña</h2>
-            <button class="customize-design__container-btn"></button>
+            <button class="customize-design__container-btn js-arrow"></button>
           </div>
 
           <form
-            class="customize-design__colors js__hidden"
+            class="customize-design__colors js__hidden js-section"
             action=""
             method="GET"
           >
             <h2 class="customize-design__colors-title">Colores</h2>
-            <label class="customize-design__colors1" for="colors1">
+            <label
+              class="customize-design__colors1 js-customize-design__colors"
+              for="colors1"
+              id="customize-design__colors1"
+            >
               <input
                 class="customize-design__colors1-selection js-customize-design__colors1-selection"
                 type="radio"
@@ -146,7 +150,11 @@
               <div class="customize-design__colors1-boxes2"></div>
               <div class="customize-design__colors1-boxes3"></div>
             </label>
-            <label class="customize-design__colors2" for="colors2">
+            <label
+              class="customize-design__colors2 js-customize-design__colors"
+              for="colors2"
+              id="customize-design__colors2"
+            >
               <input
                 class="customize-design__colors2-selection js-customize-design__colors1-selection"
                 type="radio"
@@ -158,7 +166,11 @@
               <div class="customize-design__colors2-boxes2"></div>
               <div class="customize-design__colors2-boxes3"></div>
             </label>
-            <label class="customize-design__colors3" for="colors3">
+            <label
+              class="customize-design__colors3 js-customize-design__colors"
+              for="colors3"
+              id="customize-design__colors3"
+            >
               <input
                 class="customize-design__colors3-selection js-customize-design__colors1-selection"
                 type="radio"
@@ -174,37 +186,41 @@
         </section>
         <!-- FILL -->
         <section class="gen-main__customize-menu">
-          <div class="customize-menu__container">
+          <div class="customize-menu__container js-collapsable">
             <img
               class="customize-menu__container-logo"
               src="./assets/images/keyboard.svg"
               alt="keyboard icon"
             />
-            <h1 class="customize-menu__container-title">Rellena</h1>
-            <button class="customize-menu__container-btn"></button>
+            <h2 class="customize-menu__container-title">Rellena</h2>
+            <button class="customize-menu__container-btn js-arrow"></button>
           </div>
 
-          <form class="customize-menu__form js__hidden" action="" method="post">
+          <form
+            class="customize-menu__form js__hidden js-section"
+            action=""
+            method="post"
+          >
             <label class="customize-menu__form-label" for="fullName"
               >Nombre completo
             </label>
             <input
-              class="customize-menu__form-input"
+              class="customize-menu__form-input js-input js-input-name"
               placeholder="Ej: Sally Jill"
               type="text"
               required
               id="fullName"
+              name="name"
             />
 
-            <label class="customize-menu__form-label" for="position"
-              >Puesto</label
-            >
+            <label class="customize-menu__form-label" for="position">Puesto</label>
             <input
-              class="customize-menu__form-input"
+              class="customize-menu__form-input js-input js-input-job"
               placeholder="Ej: Front end"
               type="text"
               required
               id="position"
+              name="job"
             />
             <div class="customize-menu__form-box">
               <button
@@ -217,7 +233,8 @@
                 type="file"
                 name=""
                 id="img-selector"
-                class="customize-menu__form-box-hidden js__box-button-hidden"
+                class="customize-menu__form-box-hidden js__box-button-hidden js-input"
+                name="photo"
               />
 
               <div class="customize-menu__form-image">
@@ -234,74 +251,57 @@
             </div>
             <label class="customize-menu__form-label" for="email">Email</label>
             <input
-              class="customize-menu__form-input"
+              class="customize-menu__form-input js-input js-input-email"
               placeholder="Ej: sally.hill@gmail.com"
               type="email"
               required
               id="email"
+              name="email"
             />
-            <label class="customize-menu__form-label" for="telephone"
-              >Teléfono
-            </label>
+            <label class="customize-menu__form-label" for="telephone">Teléfono </label>
             <input
-              class="customize-menu__form-input"
+              class="customize-menu__form-input js-input js-input-phone"
               placeholder="Ej: 555-555-555"
               type="tel"
               required
               id="telephone"
+              name="phone"
             />
-            <label class="customize-menu__form-label" for="linkedin"
-              >Linkedin
-            </label>
+            <label class="customize-menu__form-label" for="linkedin">Linkedin </label>
             <input
-              class="customize-menu__form-input"
+              class="customize-menu__form-input js-input js-input-linkedin"
               placeholder="Ej: linkedin.com/in/sally-hill"
               type="text"
               required
               id="linkedin"
+              name="linkedin"
             />
-            <label class="customize-menu__form-label" for="github"
-              >Github
-            </label>
+            <label class="customize-menu__form-label" for="github">Github </label>
             <input
-              class="customize-menu__form-input"
+              class="customize-menu__form-input js-input js-input-github"
               placeholder="Ej: @sally-hill"
               type="text"
               required
               id="github"
+              name="github"
             />
           </form>
         </section>
 
         <!-- SHARE -->
 
-        <section class="gen-main__customize-share">
-          <div class="customize-share__container">
-            <img
-              class="customize-share__container-logo"
-              src="./assets/images/share.svg"
-              alt="Design profile area"
-            />
-            <h1 class="customize-share__container-title">Comparte</h1>
-            <button class="customize-share__container-btn"></button>
+        <section class="gen-main__customize-share ">
+          <div class="customize-share__container js-collapsable">
+            <img class="customize-share__container-logo" src="./assets/images/share.svg" alt="Design profile area" />
+            <h2 class="customize-share__container-title">Comparte</2>
+            <button class="customize-share__container-btn js-arrow"></button>
           </div>
-          <a
-            class="customize-share__button js__hidden"
-            title="Crear la tarjeta"
-            href=""
-            >Crear tarjeta</a
-          >
+          <a class="customize-share__button js__hidden js-section js-createBtn" title="Crear la tarjeta" href="">Crear tarjeta</a>
         </section>
-        <section class="gen-main__customize-share--hidden js__hiddenlink">
-          <p class="customize-share__text--hidden">
-            La tarjeta ha sido creada:
-          </p>
-          <a class="customize-share__web--hidden" href=""
-            >https://awesome-profile-card.com?id=A456DF0001</a
-          >
-          <a class="customize-share__twitter--hidden" href=""
-            >Compartir en twitter</a
-          >
+        <section class="gen-main__customize-share--hidden js__hiddenlink js-sectionHidden">
+          <p class="customize-share__text--hidden">La tarjeta ha sido creada:</p>
+          <a class="customize-share__web--hidden" href="">https://awesome-profile-card.com?id=A456DF0001</a>
+          <a class="customize-share__twitter--hidden" href="">Compartir en twitter</a>
         </section>
       </nav>
     </main>
