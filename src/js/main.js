@@ -6,6 +6,7 @@ const uploadBtn = document.querySelector('.js__box-button');
 const fileField = document.querySelector('.js__box-button-hidden');
 const profileImage = document.querySelector('.js__profile-image');
 const profilePreview = document.querySelector('.js__profile-preview');
+const div = document.querySelector('.js-div');
 
 function getImage(e) {
   const myFile = e.currentTarget.files[0];
@@ -16,6 +17,7 @@ function getImage(e) {
 function writeImage() {
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
+  div.classList.add('js__hidden');
 }
 
 function fakeFileClick() {
@@ -90,19 +92,15 @@ for (let designColor of designColors) {
   designColor.addEventListener('click', stylePicker);
 }
 
-const data = {
+let data = {
   name: '',
   job: '',
   email: '',
-  image: '',
+  photo: '',
   phone: '',
   linkedin: '',
   github: '',
 };
-
-if (localStorage.getItem('form')) {
-  JSON.parse(localStorage.getItem('form'));
-}
 
 const saveData = function (event) {
   const inputData = event.currentTarget.name;
@@ -115,7 +113,7 @@ const render = function () {
     data.name || 'Nombre Apellido';
   document.querySelector('.js-occupation').innerHTML =
     data.job || 'Front-end developer';
-  // document.querySelector('.js-image').innerHTML = `<img src="${data.image}">`;
+
   document.querySelector('.js-phone').href = 'tel:' + data.phone;
   document.querySelector('.js-email').href = 'mailto:' + data.email;
   document.querySelector('.js-linkedin').href =
@@ -130,3 +128,23 @@ const inputList = document.querySelectorAll('.js-input');
 for (const inputItem of inputList) {
   inputItem.addEventListener('keyup', saveData);
 }
+
+const getDataFromLocalStorage = function () {
+  if (localStorage.getItem('form')) {
+    // get data from local storage
+    data = JSON.parse(localStorage.getItem('form'));
+    // paint data in form
+    //document.querySelector('.js-input-name').value = data.name;
+    //document.querySelector('.js-input-job').value = data.job;
+    for (const inputKey in data) {
+      console.log(inputKey);
+      const input = document.querySelector('.js-input-' + inputKey);
+      if (input !== null) {
+        input.value = data[inputKey];
+      }
+    }
+    render();
+  }
+};
+
+getDataFromLocalStorage();
