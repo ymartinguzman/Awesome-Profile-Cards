@@ -17,6 +17,7 @@ function writeImage() {
   div.classList.add('js__hidden');
   data.photo = fr.result;
   localStorage.setItem('form', JSON.stringify(data));
+  changeCreateBtn();
   // localStorage.setItem('photo', fr.result);
 }
 function fakeFileClick() {
@@ -92,8 +93,17 @@ let data = {
 const saveData = function (event) {
   const inputData = event.currentTarget.name;
   data[inputData] = event.currentTarget.value;
+
+  changeCreateBtn();
   render();
 };
+function changeCreateBtn() {
+  const arrayData = Object.values(data);
+  if (arrayData.length == 7) {
+    btnCreate.classList.remove('js-cardCreated');
+  }
+}
+changeCreateBtn();
 const render = function () {
   document.querySelector('.js-nameSurname').innerHTML =
     data.name || 'Nombre Apellido';
@@ -116,8 +126,6 @@ const getDataFromLocalStorage = function () {
     // get data from local storage
     data = JSON.parse(localStorage.getItem('form'));
     // paint data in form
-    //document.querySelector('.js-input-name').value = data.name;
-    //document.querySelector('.js-input-job').value = data.job;
     for (const inputKey in data) {
       console.log(inputKey);
       const input = document.querySelector('.js-input-' + inputKey);
@@ -125,9 +133,7 @@ const getDataFromLocalStorage = function () {
         input.value = data[inputKey];
       }
     }
-    // profileImage.style.backgroundImage = `url(${localStorage.getItem(
-    //   'photo'
-    // )})`;
+    profileImage.style.backgroundImage = `url(${data[photo]})`;
     render();
   }
 };
