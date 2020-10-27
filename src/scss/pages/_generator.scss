@@ -1,7 +1,7 @@
 .gen-main {
   width: 100%;
   @include tablet {
-    background-color: #f5f5f5;
+    background-color: $color-primary;
     padding: 20px 40px 20px 40px;
     display: grid;
     grid-template-columns: 326.5px 1fr;
@@ -12,7 +12,11 @@
     padding: 27px 20px 0px 20px;
   }
   &__container {
-    background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+    background-image: linear-gradient(
+      to bottom,
+      $color-softblue,
+      $color-sofwhite
+    );
     height: 460px;
     display: flex;
     flex-direction: column;
@@ -42,11 +46,11 @@
     line-height: 30px;
     text-transform: uppercase;
     letter-spacing: normal;
-    color: $fontColor-tertiary;
+    color: $color-softgrey;
     width: 75px;
     height: 30px;
     border-radius: 15px;
-    border: solid 1px $fontColor-light;
+    border: solid 1px $color-white;
     margin: 0 0 20px 0;
     padding: 0px 0px 0px 20px;
     background-image: url(../images/trash.svg);
@@ -62,7 +66,7 @@
     height: 330px;
     border-radius: 2px;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
-    background-color: $fontColor-light;
+    background-color: $color-white;
     padding: 21px 0 0 0;
   }
 }
@@ -76,9 +80,9 @@
     font-style: normal;
     line-height: 1.11;
     letter-spacing: normal;
-    color: $fontColor-secondary;
+    color: $color-quaternay;
     padding: 0 0 4px 20px;
-    border-left: 5px solid $fontColor-blueish;
+    border-left: 5px solid $color-secondary;
   }
   &__occupation {
     font-family: $fontFamily-title-secondary;
@@ -88,9 +92,9 @@
     font-style: normal;
     line-height: 1.25;
     letter-spacing: normal;
-    color: $fontColor-tertiary;
+    color: $color-softgrey;
     padding: 0 0 0 20px;
-    border-left: 5px solid $fontColor-blueish;
+    border-left: 5px solid $color-secondary;
   }
   &__photo {
     width: 240px;
@@ -121,7 +125,7 @@
       border-radius: 50%;
       width: 32px;
       height: 32px;
-      border: solid 2px $fontColor-greenish;
+      border: solid 2px $color-greenish;
       text-align: center;
       margin: 0 0 0 10px;
     }
@@ -129,12 +133,12 @@
     &-linkedin,
     &-github {
       font-size: 9px;
-      color: $fontColor-secondary;
+      color: $color-quaternay;
       line-height: 32px;
     }
     &-call {
       font-size: 12px;
-      color: $fontColor-secondary;
+      color: $color-quaternay;
       line-height: 36px;
     }
   }
