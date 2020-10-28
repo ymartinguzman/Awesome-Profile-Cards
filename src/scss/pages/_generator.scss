@@ -413,7 +413,7 @@
     text-align: center;
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 20px;
+    margin: 10px 0px 20px 0px;
     &--button {
       width: 140px;
       height: 30px;
@@ -629,12 +629,15 @@
   display: none;
 }
 
-.js__error-message {
+.js__error-message-name,
+.js__error-message-job {
   position: absolute;
   margin-top: -15px;
-  width: 287px;
+  width: 100%;
   text-align: right;
-  font-family: $fontFamily-title;
+  font-family: $fontFamily-text;
+  font-weight: 700;
+  color: $color-ferrarired;
 }
 .js-input {
   font-family: $fontFamily-title-secondary;
