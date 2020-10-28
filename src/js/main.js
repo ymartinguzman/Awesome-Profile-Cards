@@ -136,6 +136,8 @@ const getDataFromLocalStorage = function () {
   if (localStorage.getItem("form")) {
     // get data from local storage
     data = JSON.parse(localStorage.getItem("form"));
+    profileImage.style.backgroundImage = `url(${data.photo})`;
+    document.querySelector(".js-div").classList.add("js__hidden-img");
     // paint data in form
     for (const inputKey in data) {
       console.log(inputKey);
