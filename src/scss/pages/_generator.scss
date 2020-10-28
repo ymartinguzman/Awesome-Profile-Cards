@@ -1,7 +1,8 @@
-.body {
+body {
   width: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
   @include tablet {
     height: 100vh;
   }
