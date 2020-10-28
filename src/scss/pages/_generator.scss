@@ -625,6 +625,8 @@
 
 .js-cardCreated {
   background-color: $color-softwhite;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .js__hidden-img {

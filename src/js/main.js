@@ -110,11 +110,6 @@ const saveData = function (event) {
   render();
 };
 function changeCreateBtn() {
-  // const arrayData = Object.values(data);
-  // if (arrayData.length == 7) {
-  //   btnCreate.classList.remove('js-cardCreated');
-  // }
-  //
   if (
     data.name !== '' &&
     data.job !== '' &&
@@ -148,6 +143,7 @@ const inputList = document.querySelectorAll('.js-input');
 for (const inputItem of inputList) {
   inputItem.addEventListener('keyup', saveData);
 }
+
 const getDataFromLocalStorage = function () {
   if (localStorage.getItem('form')) {
     // get data from local storage
