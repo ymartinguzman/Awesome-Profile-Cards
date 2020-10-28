@@ -48,26 +48,31 @@
                   class="card__img-1"
                   src="./assets/images/pin-long-brown-hair.png"
                   alt="Card Photo"
+                  title="Imagen por defecto"
                 />
                 <img
                   class="card__img-2"
                   src="./assets/images/pin-glasses.png"
                   alt="Card Photo"
+                  title="Imagen por defecto"
                 />
                 <img
                   class="card__img-3"
                   src="./assets/images/pin-dark-hair.png"
                   alt="Card Photo"
+                  title="Imagen por defecto"
                 />
                 <img
                   class="card__img-4"
                   src="./assets/images/pin-lights.png"
                   alt="Card Photo"
+                  title="Imagen por defecto"
                 />
                 <img
                   class="card__img-5"
                   src="./assets/images/pin-long-hair.png"
                   alt="Card Photo"
+                  title="Imagen por defecto"
                 />
               </div>
             </div>
@@ -78,6 +83,7 @@
                   href=""
                   target="_blank"
                   alt="Call me"
+                  title="Enlace al número de teléfono"
                   ><i class="fa fa-mobile fa-2x" aria-hidden="true"></i
                 ></a>
               </div>
@@ -87,6 +93,7 @@
                   href=""
                   target="_blank"
                   alt="Email me"
+                  title="Enlace al e-mail"
                   ><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i
                 ></a>
               </div>
@@ -96,6 +103,7 @@
                   href=""
                   target="_blank"
                   alt="Find me on linkedIn"
+                  title="Enlace a Linkedin"
                   ><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i
                 ></a>
               </div>
@@ -105,6 +113,7 @@
                   href=""
                   target="_blank"
                   alt="I'm on GitHub!"
+                  title="Enlace a Github"
                   ><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i
                 ></a>
               </div>
@@ -117,7 +126,7 @@
 
       <nav class="gen-main__customize">
         <section class="gen-main__customize-design">
-          <div class="customize-design__container js-collapsable">
+          <div class="customize-design__container js-collapsable" tabindex="2">
             <img
               class="customize-design__container-logo"
               src="./assets/images/design.svg"
@@ -212,6 +221,7 @@
               id="fullName"
               name="name"
             />
+            <p class="js__error-message-name js__hidden">Demasiado largo</p>
 
             <label class="customize-menu__form-label" for="position">Puesto</label>
             <input
@@ -222,6 +232,7 @@
               id="position"
               name="job"
             />
+            <p class="js__error-message-job js__hidden">Demasiado largo</p>
             <div class="customize-menu__form-box">
               <button
                 class="customize-menu__form-box--button js__box-button"
@@ -296,11 +307,11 @@
             <h2 class="customize-share__container-title">Comparte</2>
             <button class="customize-share__container-btn js-arrow"></button>
           </div>
-          <a class="customize-share__button js__hidden js-section js-createBtn" title="Crear la tarjeta" href="">Crear tarjeta</a>
+          <a class="customize-share__button js__hidden js-section js-createBtn js-cardCreated" title="Crear la tarjeta" href="" target="_blank">Crear tarjeta</a> 
         </section>
         <section class="gen-main__customize-share--hidden js__hiddenlink js-sectionHidden">
           <p class="customize-share__text--hidden">La tarjeta ha sido creada:</p>
-          <a class="customize-share__web--hidden" href="">https://awesome-profile-card.com?id=A456DF0001</a>
+          <a class="js-twitter-url customize-share__web--hidden" href="" target="_blank"></a>
           <a class="customize-share__twitter--hidden" href="">Compartir en twitter</a>
         </section>
       </nav>
