@@ -110,11 +110,26 @@ const saveData = function (event) {
   render();
 };
 function changeCreateBtn() {
-  const arrayData = Object.values(data);
-  if (arrayData.length == 7) {
+  // const arrayData = Object.values(data);
+  // if (arrayData.length == 7) {
+  //   btnCreate.classList.remove('js-cardCreated');
+  // }
+  //
+  if (
+    data.name !== '' &&
+    data.job !== '' &&
+    data.email !== '' &&
+    data.phone !== '' &&
+    data.linkedin !== '' &&
+    data.github !== '' &&
+    data.photo !== ''
+  ) {
     btnCreate.classList.remove('js-cardCreated');
+  } else {
+    btnCreate.classList.add('js-cardCreated');
   }
 }
+
 changeCreateBtn();
 const render = function () {
   document.querySelector('.js-nameSurname').innerHTML =
