@@ -18,7 +18,6 @@ function writeImage() {
   data.photo = fr.result;
   localStorage.setItem('form', JSON.stringify(data));
   changeCreateBtn();
-  // localStorage.setItem('photo', fr.result);
 }
 function fakeFileClick() {
   fileField.click();
@@ -138,12 +137,14 @@ const getDataFromLocalStorage = function () {
   if (localStorage.getItem('form')) {
     // get data from local storage
     data = JSON.parse(localStorage.getItem('form'));
-    profileImage.style.backgroundImage = `url(${data.photo})`;
-    profilePreview.style.backgroundImage = `url(${data.photo})`;
-    document.querySelector('.js-div').classList.add('js__hidden-img');
+    if (data.photo !== '') {
+      profileImage.style.backgroundImage = `url(${data.photo})`;
+      profilePreview.style.backgroundImage = `url(${data.photo})`;
+      document.querySelector('.js-div').classList.add('js__hidden-img');
+    }
+
     // paint data in form
     for (const inputKey in data) {
-      console.log(inputKey);
       const input = document.querySelector('.js-input-' + inputKey);
       if (input !== null) {
         input.value = data[inputKey];
@@ -162,8 +163,12 @@ const handleReset = function () {
   data.phone = '';
   data.linkedin = '';
   data.github = '';
+  data.photo = '';
   for (const input of inputList) {
     input.value = '';
+    profileImage.style.backgroundImage = 'none';
+    profilePreview.style.backgroundImage = 'none';
+    div.classList.remove('js__hidden-img');
   }
   render();
 };
