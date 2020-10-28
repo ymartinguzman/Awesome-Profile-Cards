@@ -6,8 +6,9 @@
 }
 .gen-main {
   width: 100%;
-  height: auto;
+  height: 100%;
   flex-grow: 1;
+  min-height: auto;
   @include tablet {
     background-color: $color-primary;
     padding: 20px 40px 20px 40px;
@@ -601,8 +602,11 @@
   }
 }
 
-.customize-menu__form-image--profile {
-  display: none;
+.customize-menu__form {
+  position: relative;
+  &-image--profile {
+    display: none;
+  }
 }
 //JS
 .js__hidden,
@@ -623,4 +627,15 @@
 
 .js__hidden-img {
   display: none;
+}
+
+.js__error-message {
+  position: absolute;
+  margin-top: -15px;
+  width: 287px;
+  text-align: right;
+  font-family: $fontFamily-title;
+}
+.js-input {
+  font-family: $fontFamily-title-secondary;
 }
