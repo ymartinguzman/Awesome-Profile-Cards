@@ -14,7 +14,7 @@ function getImage(e) {
 function writeImage() {
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
-  div.classList.add("js__hidden");
+  div.classList.add("js__hidden-img");
   data.photo = fr.result;
   localStorage.setItem("form", JSON.stringify(data));
   changeCreateBtn();
@@ -144,7 +144,7 @@ const getDataFromLocalStorage = function () {
         input.value = data[inputKey];
       }
     }
-    profileImage.style.backgroundImage = `url(${data[photo]})`;
+
     render();
   }
 };
