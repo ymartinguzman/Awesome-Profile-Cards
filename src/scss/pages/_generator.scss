@@ -1,8 +1,10 @@
 .body {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  @include tablet {
+    height: 100vh;
+  }
 }
 .gen-main {
   width: 100%;
