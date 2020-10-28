@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: $color-primary;
+  background-color: $color-background;
 }
 
 .main {
@@ -18,22 +18,22 @@ body {
   margin-bottom: 30px;
   justify-content: space-between;
   height: auto;
-  background-color: $color-primary;
+  background-color: $color-background;
   @include tablet {
     margin-bottom: 60px;
   }
   &__logo {
-    width: 250px;
+    width: 300px;
     justify-self: center;
-    padding: 0 0 35.5px 0;
+    padding: 0 0 37.5px 0;
     @include tablet {
-      width: 419px;
+      width: 619px;
       padding: 0 0 31px 0;
     }
   }
   &__title {
     font-family: $fontFamily-title;
-    color: $color-tertiary;
+    color: $color-background-medium-light-extra;
     font-size: 19.2px;
     font-weight: 900;
     font-stretch: normal;
@@ -47,7 +47,7 @@ body {
   }
   &__text {
     font-family: $fontFamily-text;
-    color: $color-quaternay;
+    color: $color-background-medium-light;
     width: 300px;
     font-size: 12.8px;
     font-weight: normal;
@@ -66,12 +66,12 @@ body {
   &__benefits {
     display: flex;
     border-radius: 4px;
-    border: solid 1.6px rgba(225, 115, 52, 0.21);
+    border: solid 1.6px $color-background-medium-light;
     width: 268px;
     height: 74px;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 38px;
+    margin-bottom: 70px;
     @include tablet {
       width: 325px;
     }
@@ -93,7 +93,7 @@ body {
     }
     &-itemtitle {
       font-family: $fontFamily-text;
-      color: $color-softgrey;
+      color: $color-background-medium-light;
       font-size: 12.8px;
       font-weight: normal;
       font-stretch: normal;
@@ -107,11 +107,11 @@ body {
     text-decoration: none;
     width: 129px;
     height: 42px;
-    background-color: $color-secondary;
+    background-color: $color-background-medium;
     border-radius: 21px;
     border: 0px;
     font-family: $fontFamily-text;
-    color: $color-white;
+    color: $color-background-medium-light-extra;
     font-size: 16px;
     font-weight: 600;
     font-stretch: normal;
@@ -122,4 +122,9 @@ body {
     text-justify: center;
     text-align: center;
   }
+}
+
+.false-footer {
+  height: 60px;
+  background-color: $color-background;
 }
