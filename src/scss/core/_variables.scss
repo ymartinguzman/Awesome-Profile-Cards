@@ -20,6 +20,12 @@ $color-softpink: #ccc;
 $color-mediumblue: #00a0f5;
 $color-softwhite: #d5d5d5;
 
+$color-background: #261c3a;
+$color-background-medium: #990066;
+$color-background-medium-light: #1bb29c;
+$color-background-medium-light-extra: #ffff33;
+$color-background-light: #eeecf3;
+
 // Font colors
 $fontColor-main: #e17334;
 $fontColor-secondary: #114e4e;
@@ -30,9 +36,9 @@ $fontColor-blueish: #438792;
 $fontColor-greenish: #a2deaf;
 
 // Fonts
-$fontFamily-title: 'Merriweather', serif;
-$fontFamily-text: 'Open Sans', sans-serif;
-$fontFamily-title-secondary: 'Montserrat', sans-serif;
+$fontFamily-title: "Merriweather", serif;
+$fontFamily-text: "Open Sans", sans-serif;
+$fontFamily-title-secondary: "Montserrat", sans-serif;
 
 // Breakpoints
 $tablet-min: 768px;

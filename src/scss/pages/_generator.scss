@@ -10,7 +10,7 @@
   flex-grow: 1;
   min-height: auto;
   @include tablet {
-    background-color: $color-primary;
+    background-color: $color-background;
     padding: 20px 40px 20px 40px;
     display: grid;
     grid-template-columns: 326.5px 1fr;
@@ -23,8 +23,8 @@
   &__container {
     background-image: linear-gradient(
       to bottom,
-      $color-softblue,
-      $color-sofwhite
+      $color-background,
+      $color-background-light
     );
     height: auto;
     display: flex;
@@ -575,7 +575,6 @@
   margin: 10px 0px 0px 0px;
   padding: 3px 9px 7px 38px;
   background-image: url(../images/twittersvg.svg);
-  // background-position: left;
   background-size: 18px;
   background-repeat: no-repeat;
   background-position: 10.5px 6px;
