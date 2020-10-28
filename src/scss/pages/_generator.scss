@@ -10,7 +10,7 @@ body {
   height: auto;
   flex-grow: 1;
   @include tablet {
-    background-color: #f5f5f5;
+    background-color: $color-primary;
     padding: 20px 40px 20px 40px;
     display: grid;
     grid-template-columns: 326.5px 1fr;
@@ -51,11 +51,11 @@ body {
     line-height: 30px;
     text-transform: uppercase;
     letter-spacing: normal;
-    color: $fontColor-tertiary;
+    color: $color-softgrey;
     width: 75px;
     height: 30px;
     border-radius: 15px;
-    border: solid 1px $fontColor-light;
+    border: solid 1px $color-white;
     margin: 0 0 20px 0;
     padding: 0px 0px 0px 20px;
     background-image: url(../images/trash.svg);
@@ -71,7 +71,7 @@ body {
     height: 330px;
     border-radius: 2px;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
-    background-color: $fontColor-light;
+    background-color: $color-white;
     padding: 21px 0 0 0;
   }
 }
@@ -85,9 +85,9 @@ body {
     font-style: normal;
     line-height: 1.11;
     letter-spacing: normal;
-    color: $fontColor-secondary;
+    color: $color-quaternay;
     padding: 0 0 4px 20px;
-    border-left: 5px solid $fontColor-blueish;
+    border-left: 5px solid $color-secondary;
   }
   &__occupation {
     font-family: $fontFamily-title-secondary;
@@ -97,9 +97,9 @@ body {
     font-style: normal;
     line-height: 1.25;
     letter-spacing: normal;
-    color: $fontColor-tertiary;
+    color: $color-softgrey;
     padding: 0 0 0 20px;
-    border-left: 5px solid $fontColor-blueish;
+    border-left: 5px solid $color-secondary;
   }
   &__photo {
     width: 240px;
@@ -130,7 +130,7 @@ body {
       border-radius: 50%;
       width: 32px;
       height: 32px;
-      border: solid 2px $fontColor-greenish;
+      border: solid 2px $color-greenish;
       text-align: center;
       margin: 0 0 0 10px;
     }
@@ -138,12 +138,12 @@ body {
     &-linkedin,
     &-github {
       font-size: 9px;
-      color: $fontColor-secondary;
+      color: $color-quaternay;
       line-height: 32px;
     }
     &-call {
       font-size: 12px;
-      color: $fontColor-secondary;
+      color: $color-quaternay;
       line-height: 36px;
     }
   }
@@ -194,20 +194,12 @@ body {
     text-transform: uppercase;
     font-size: 18px;
     margin-left: 10px;
-    color: $fontColor-tertiary;
+    color: $color-softgrey;
   }
   &-logo {
     width: 21px;
     height: 18px;
   }
-  // &-crocodile {
-  //   justify-content: right;
-  //   width: 16px;
-  //   height: 18px;
-  //   transform: rotate(-90deg);
-  //   color: $fontColor-tertiary;
-  //   margin-left: 168px;
-  // }
 }
 
 .gen-main__customize {
@@ -248,7 +240,7 @@ body {
     text-transform: uppercase;
     font-size: 14px;
     font-family: $fontFamily-text;
-    color: $fontColor-tertiary;
+    color: $color-softgrey;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -291,7 +283,7 @@ body {
   &-boxes3 {
     width: 30px;
     height: 25px;
-    background-color: #a2deaf;
+    background-color: $color-greenish;
     margin-top: 28px;
   }
 }
@@ -310,20 +302,20 @@ body {
   &-boxes1 {
     width: 30px;
     height: 25px;
-    background-color: #420101;
+    background-color: $color-deepred;
     margin-top: 20px;
     margin-left: 10px;
   }
   &-boxes2 {
     width: 30px;
     height: 25px;
-    background-color: #bd1010;
+    background-color: $color-ferrarired;
     margin-top: 20px;
   }
   &-boxes3 {
     width: 30px;
     height: 25px;
-    background-color: #e95626;
+    background-color: $color-orange;
     margin-top: 20px;
   }
 }
@@ -342,20 +334,20 @@ body {
   &-boxes1 {
     width: 30px;
     height: 25px;
-    background-color: #3e5b65;
+    background-color: $color-darkturquoise;
     margin-top: 20px;
     margin-left: 10px;
   }
   &-boxes2 {
     width: 30px;
     height: 25px;
-    background-color: #eab052;
+    background-color: $color-goldenorange;
     margin-top: 20px;
   }
   &-boxes3 {
     width: 30px;
     height: 25px;
-    background-color: #a0c0cf;
+    background-color: $color-lightgrey;
     margin-top: 20px;
   }
 }
@@ -381,21 +373,17 @@ body {
     text-transform: uppercase;
     font-size: 18px;
     margin-left: 10px;
-    color: $fontColor-tertiary;
+    color: $color-softgrey;
   }
 }
 
 .customize-menu__form {
   font-size: 14px;
   margin-top: 20px;
-  transition: ease-in-out 1s;
-  // font-weight: 00;
-  /*me parece que es más gordita la letra*/
   &-label {
     display: flex;
     flex-direction: column;
-    color: #114e4e;
-    // font-weight: 600; No se queda igual
+    color: $color-quaternay;
     line-height: 20px;
     margin-bottom: 7px;
     font-family: $fontFamily-text;
@@ -403,8 +391,8 @@ body {
   &-input {
     width: 100%;
     height: 30px;
-    border: solid 1px #a2deaf;
-    outline-color: #a2deaf;
+    border: solid 1px $color-greenish;
+    outline-color: $color-greenish;
     line-height: 20px;
     margin-bottom: 20px;
     padding: 0px 0px 0px 10px;
@@ -413,7 +401,7 @@ body {
     }
   }
   &::-webkit-input-placeholder {
-    color: #c5c5c5;
+    color: $color-softbrown;
   }
   &-box {
     text-align: center;
@@ -425,9 +413,9 @@ body {
       height: 30px;
       font-family: $fontFamily-text;
       line-height: 21px;
-      background: $fontColor-main;
+      background: $color-tertiary;
       font-size: 14px;
-      color: $fontColor-light;
+      color: $color-white;
       padding: 3px 22px 7px 22px;
       border-radius: 3px;
       border: rgba(#000, 0.3);
@@ -447,7 +435,7 @@ body {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      border: 1px solid #ccc;
+      border: 1px solid $color-softpink;
     }
     &--profile {
       width: 300px;
@@ -459,7 +447,7 @@ body {
       width: 30px;
       height: 30px;
       margin-left: 15px;
-      border: solid 1px #a2deaf;
+      border: solid 1px $color-greenish;
     }
   }
 }
@@ -467,7 +455,7 @@ body {
 .customize-menu__form-image--preview {
   height: 30px;
   width: 30px;
-  border: 1px solid #a2deaf;
+  border: 1px solid $color-greenish;
 }
 
 //SHARE
@@ -476,13 +464,13 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10px 0px 7px 0px;
-  border-bottom: 1px solid #d8d8d8;
+  border-bottom: 1px solid $color-border;
   &--hidden {
     padding: 20px 0px 30px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid #d8d8d8;
+    border-bottom: 1px solid $color-border;
   }
 }
 .customize-share__container {
@@ -493,7 +481,7 @@ body {
     text-transform: uppercase;
     font-size: 18px;
     margin-left: 12px;
-    color: $fontColor-tertiary;
+    color: $color-softgrey;
   }
   &-logo {
     width: 21px;
@@ -522,7 +510,7 @@ body {
   margin: 30px 0px 30px 0px;
   padding: 13px 18px 13px 48px;
   align-self: center;
-  background-color: $color-tertiary;
+  background-color: $color-softgrey;
   background-image: url(../images/address.svg);
   background-repeat: no-repeat;
   background-size: 25px;
@@ -546,7 +534,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: $fontColor-main;
+  color: $color-tertiary;
   margin-top: 5px;
   text-align: center;
   @include tablet {
@@ -558,7 +546,7 @@ body {
   font-family: $fontFamily-text;
   font-weight: 600;
   font-size: 18px;
-  color: $fontColor-tertiary;
+  color: $color-tertiary;
 }
 
 .customize-share__twitter--hidden {
@@ -568,7 +556,7 @@ body {
   height: 30px;
   border-radius: 3px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-  background-color: #00a0f5;
+  background-color: $color-softblue;
   font-family: $fontFamily-text;
   font-size: 14px;
   font-weight: normal;
@@ -577,7 +565,7 @@ body {
   line-height: 21px;
   letter-spacing: normal;
   text-decoration: none;
-  color: $fontColor-light;
+  color: $color-white;
   margin: 10px 0px 0px 0px;
   padding: 3px 9px 7px 38px;
   background-image: url(../images/twittersvg.svg);
@@ -598,7 +586,7 @@ body {
   width: 16px;
   height: 18px;
   border: none;
-  background-color: $fontColor-light;
+  background-color: $color-white;
   position: absolute;
   right: 0px;
   outline: none;
@@ -625,7 +613,7 @@ body {
 }
 
 .js-cardCreated {
-  background-color: #d5d5d5;
+  background-color: $color-softwhite;
 }
 
 //Añadir transiciones al colapsable: clase de la 608 cambia, estaba en display: none pero display no es transicionable, así que he cambiado a height, margin y padding 0, con un overflow hidden. Posteriormente, en las líneas 234 382 y 521 le añado la línea de transition a cada una de las secciones.
