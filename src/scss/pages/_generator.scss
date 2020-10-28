@@ -504,7 +504,7 @@
   margin: 30px 0px 30px 0px;
   padding: 13px 18px 13px 48px;
   align-self: center;
-  background-color: $color-softgrey;
+  background-color: $color-tertiary;
   background-image: url(../images/address.svg);
   background-repeat: no-repeat;
   background-size: 25px;
@@ -549,7 +549,7 @@
   height: 30px;
   border-radius: 3px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-  background-color: $color-softblue;
+  background-color: $color-mediumblue;
   font-family: $fontFamily-text;
   font-size: 14px;
   font-weight: normal;
@@ -562,7 +562,6 @@
   margin: 10px 0px 0px 0px;
   padding: 3px 9px 7px 38px;
   background-image: url(../images/twittersvg.svg);
-  // background-position: left;
   background-size: 18px;
   background-repeat: no-repeat;
   background-position: 10.5px 6px;
