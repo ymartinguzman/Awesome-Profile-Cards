@@ -14,6 +14,7 @@ function collapseMenu(ev) {
     }
   }
 }
+
 for (const buttonCollapse of buttonContainer) {
   buttonCollapse.addEventListener('click', collapseMenu);
 }
