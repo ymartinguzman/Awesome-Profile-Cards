@@ -33,7 +33,7 @@ body {
   }
   &__title {
     font-family: $fontFamily-title;
-    color: $fontColor-main;
+    color: $color-background-medium-light-extra;
     font-size: 19.2px;
     font-weight: 900;
     font-stretch: normal;
@@ -47,7 +47,7 @@ body {
   }
   &__text {
     font-family: $fontFamily-text;
-    color: $fontColor-secondary;
+    color: $color-background-medium-light;
     width: 300px;
     font-size: 12.8px;
     font-weight: normal;
